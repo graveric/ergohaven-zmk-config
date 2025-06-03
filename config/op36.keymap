@@ -68,11 +68,6 @@
             key-positions = <2 3>;
         };
 
-        Esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <23 22>;
-        };
-
         Fn {
             bindings = <&sl 6>;
             key-positions = <26 27>;
@@ -111,6 +106,24 @@
         plus {
             bindings = <&kp PLUS>;
             key-positions = <11 12>;
+            layers = <0 1 7>;
+        };
+
+        q_en {
+            bindings = <&none>;
+            key-positions = <6 16>;
+            layers = <0 7>;
+        };
+
+        q_ru {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <16 6>;
+            layers = <1>;
+        };
+
+        exclam {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <13 3>;
             layers = <0 1 7>;
         };
     };
@@ -155,10 +168,10 @@
 
         RU {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans     &trans   &trans
-  &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans     &trans   &trans
-  &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &kp COMMA  &kp DOT  &kp KP_SLASH
-                          &trans  &trans  &trans    &lt 4 ENTER  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                               &trans     &trans  &trans     &trans   &trans
+  &trans  &trans  &trans  &trans  &trans                               &trans     &trans  &trans     &trans   &trans
+  &trans  &trans  &trans  &trans  &trans                               &trans     &trans  &kp COMMA  &kp DOT  &kp KP_SLASH
+                          &trans  &kp QUESTION  &trans    &lt 4 ENTER  &kp SLASH  &trans
             >;
         };
 
@@ -167,25 +180,25 @@
   &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                        &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
   &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                      &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
   &kp LC(Z)    &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                   &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
-                                                &trans           &trans        &trans    &mo 5  &trans        &trans
+                                                &trans           &trans        &trans    &mo 5  &kp ESCAPE    &kp DEL
             >;
         };
 
         sym {
             bindings = <
-  &none      &kp LT         &kp EQUAL      &kp GT    &kp GRAVE                   &kp CARET     &kp LBKT     &kp UNDER  &kp RBKT     &none
-  &kp N1     &kp N2         &kp N3         &kp N4    &kp N5                      &kp N6        &kp N7       &kp N8     &kp N9       &kp N0
-  &kp GRAVE  &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI  &kp BSLH                    &kp LS(PIPE)  &kp LS(DQT)  &kp MINUS  &kp LS(DQT)  &kp LS(QMARK)
-                                           &trans    &trans     &mo 5    &trans  &trans        &trans
+  &none      &kp LT         &kp EQUAL      &kp GT    &kp GRAVE                    &kp CARET     &kp LBKT     &kp UNDER  &kp RBKT     &none
+  &kp N1     &kp N2         &kp N3         &kp N4    &kp N5                       &kp N6        &kp N7       &kp N8     &kp N9       &kp N0
+  &kp GRAVE  &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI  &kp BSLH                     &kp LS(PIPE)  &kp LS(DQT)  &kp MINUS  &kp LS(DQT)  &kp LS(QMARK)
+                                           &trans    &kp ESCAPE  &mo 5    &trans  &trans        &trans
             >;
         };
 
         SYM_RU {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &mo 5    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+                          &trans  &kp ESCAPE  &mo 5    &trans  &trans  &trans
             >;
         };
 
