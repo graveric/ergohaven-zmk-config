@@ -188,7 +188,7 @@
   &kp J        &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &kp MINUS                                   &kp Q  &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) W  &hmr RIGHT_ALT X
   &hml LGUI H  &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &kp RS(PERIOD)                              &kp P  &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
   &kp K        &kp SQT           &kp SLASH             &kp LS(COMMA)     &kp SEMICOLON                               &kp B  &kp C              &kp M                 &kp F             &kp V
-                                                       &kp TAB           &key_repeat     &lt 2 SPACE    &lt 3 ENTER  &kt T  &kp BACKSPACE
+                                                       &kp TAB           &key_repeat     &lt 2 SPACE    &lt 3 ENTER  &kt T  &lt 8 BACKSPACE
             >;
         };
 
@@ -252,6 +252,15 @@
   &kp S  &kp R  &kp N  &kp T    &kp B                          &kp Y    &kp C     &kp A      &kp E    &kp I
   &kp Z  &kp X  &kp M  &kp D    &kp P                          &kp SQT  &kp W     &kp COMMA  &kp DOT  &kp SLASH
                        &kp TAB  &to 0  &kp SPACE    &kp ENTER  &trans   &kp BSPC
+            >;
+        };
+
+        khronkite {
+            bindings = <
+  &kp LA(LG(Q))  &kp LA(LG(O))  &kp LG(LS(K))  &kp LA(LG(R))  &kp LA(LG(T))                       &kp LG(F)               &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
+  &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))                       &kp LS(LG(UP))          &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
+  &kp LG(M)      &kp LG(LC(K))  &kp LC(LG(H))  &kp LC(LG(L))  &kp LC(LG(J))                       &kp LS(LG(DOWN_ARROW))  &kp LG(M)       &kp LA(F3)      &kp LC(LG(A))    &kp LG(D)
+                                               &kp LG(ENTER)  &kp LG(K)      &kp LG(J)    &trans  &trans                  &trans
             >;
         };
     };
