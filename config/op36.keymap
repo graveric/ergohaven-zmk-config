@@ -148,7 +148,7 @@
             key-positions = <22 12>;
         };
 
-        nord-Z {
+        nord_Z {
             bindings = <&kp Z>;
             key-positions = <17 16>;
             layers = <8>;
