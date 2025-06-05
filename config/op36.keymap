@@ -188,7 +188,7 @@
   &kp J        &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &kp MINUS                                   &kp Q  &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) W  &hmr RIGHT_ALT X
   &hml LGUI H  &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &kp RS(PERIOD)                              &kp P  &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
   &kp K        &kp SQT           &kp SLASH             &kp LS(COMMA)     &kp SEMICOLON                               &kp B  &kp C              &kp M                 &kp F             &kp V
-                                                       &kp TAB           &key_repeat     &lt 2 SPACE    &lt 3 ENTER  &kt T  &lt 8 BACKSPACE
+                                                       &kp TAB           &key_repeat     &lt 2 SPACE    &lt 3 ENTER  &kp T  &lt 8 BACKSPACE
             >;
         };
 
