@@ -150,7 +150,8 @@
 
         nord-Z {
             bindings = <&kp Z>;
-            key-positions = <17 7>;
+            key-positions = <17 16>;
+            layers = <8>;
         };
     };
 
