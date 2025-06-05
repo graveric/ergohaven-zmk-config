@@ -185,10 +185,10 @@
 
         base {
             bindings = <
-  &kp J        &kp Y        &kp O                &kp U          &kp MINUS                                   &kp Y  &kp U          &kp I         &kp O        &kp P
-  &hml LGUI H  &hml LALT I  &hml LEFT_CONTROL E  &hml LSHFT A   &kp RS(PERIOD)                              &kp P  &hmr RSHIFT D  &hmr RCTRL R  &hmr LALT S  &hmr RGUI L
-  &kp K        &kp SQT      &kp SLASH            &kp LS(COMMA)  &kp SEMICOLON                               &kp B  &kp C          &kp M         &kp F        &kp V
-                                                 &kp TAB        &key_repeat     &lt 2 SPACE    &lt 3 ENTER  &kt T  &kp BACKSPACE
+  &kp J        &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &kp MINUS                                   &kp Q  &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) W  &hmr RIGHT_ALT X
+  &hml LGUI H  &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &kp RS(PERIOD)                              &kp P  &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
+  &kp K        &kp SQT           &kp SLASH             &kp LS(COMMA)     &kp SEMICOLON                               &kp B  &kp C              &kp M                 &kp F             &kp V
+                                                       &kp TAB           &key_repeat     &lt 2 SPACE    &lt 3 ENTER  &kt T  &kp BACKSPACE
             >;
         };
 
@@ -212,10 +212,10 @@
 
         sym {
             bindings = <
-  &none      &kp LT         &kp EQUAL      &kp GT    &kp GRAVE                    &kp CARET     &kp LBKT     &kp UNDER  &kp RBKT     &none
-  &kp N1     &kp N2         &kp N3         &kp N4    &kp N5                       &kp N6        &kp N7       &kp N8     &kp N9       &kp N0
-  &kp GRAVE  &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI  &kp BSLH                     &kp LS(PIPE)  &kp LS(DQT)  &kp MINUS  &kp LS(DQT)  &kp LS(QMARK)
-                                           &trans    &kp ESCAPE  &mo 5    &trans  &trans        &trans
+  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH       &kp DOLLAR  &kp PERCENT                   &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+  &kp N1           &kp N2         &kp N3         &kp N4      &kp N5                        &kp N6        &kp N7         &kp N8        &kp N9                &kp N0
+  &kp GRAVE        &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI    &kp BSLH                      &kp LS(PIPE)  &kp LS(DQT)    &kp MINUS     &kp LS(DQT)           &kp LS(QMARK)
+                                                 &trans      &kp ESCAPE   &mo 5    &trans  &trans        &trans
             >;
         };
 
