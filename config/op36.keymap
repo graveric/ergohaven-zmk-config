@@ -252,10 +252,10 @@
 
         nordrassil {
             bindings = <
-  &kp J  &kp Y     &kp O     &kp U      &kp MINUS                    &kp Q  &kp G   &kp N  &kp W  &kp X
-  &kp H  &kp I     &kp E     &kp A      &kp DOT                      &kp P  &kp D   &kp R  &kp S  &kp L
-  &kp K  &kp APOS  &kp FSLH  &kp COMMA  &kp SEMI                     &kp B  &kp C   &kp M  &kp F  &kp V
-                             &trans     &to 0      &trans    &trans  &kp T  &trans
+  &kp J  &kp Y     &kp O     &kp U      &kp MINUS                      &kp Q  &kp G   &kp N  &kp W  &kp X
+  &kp H  &kp I     &kp E     &kp A      &kp DOT                        &kp P  &kp D   &kp R  &kp S  &kp L
+  &kp K  &kp APOS  &kp FSLH  &kp COMMA  &kp SEMI                       &kp B  &kp C   &kp M  &kp F  &kp V
+                             &to 0      &key_repeat  &trans    &trans  &kp T  &trans
             >;
         };
     };
