@@ -98,7 +98,7 @@
             bindings = <&commaspace_en>, <&kp COMMA>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
         };
     };
 
