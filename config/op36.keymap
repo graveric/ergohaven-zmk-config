@@ -37,6 +37,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
+
+        up_: up_ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_";
+            bindings = <&kp UNDERSCORE>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -185,10 +194,10 @@
 
         base {
             bindings = <
-  &kp J        &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &kp MINUS                                  &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) W  &hmr RIGHT_ALT X
-  &hml LGUI H  &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &kp PERIOD                                 &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &kp K        &kp SQT           &kp SLASH             &kp COMMA         &kp SEMICOLON                              &kp B    &kp C              &kp M                 &kp F             &kp V
-                                                       &kp TAB           &key_repeat    &lt 2 SPACE    &lt 3 ENTER  &lt 8 T  &kp BACKSPACE
+  &kp J        &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &kp MINUS                                &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI H  &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &kp PERIOD                               &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
+  &kp K        &kp SQT           &up_                  &kp COMMA         &kp SLASH                                &kp B    &kp C              &kp M                 &kp W             &kp V
+                                                       &kp TAB           &key_repeat  &lt 2 SPACE    &lt 3 ENTER  &lt 8 T  &kp BACKSPACE
             >;
         };
 
