@@ -41,7 +41,7 @@
         up_: up_ {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_";
-            bindings = <&kp UNDERSCORE>, <&kp EQUAL>;
+            bindings = <&kp UNDERSCORE>, <&kp EXCLAMATION>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -59,7 +59,7 @@
         up_slash: up_slash {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_SLASH";
-            bindings = <&kp SLASH>, <&kp EXCLAMATION>;
+            bindings = <&kp SLASH>, <&kp ASTERISK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -68,7 +68,7 @@
         up_dot: up_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_DOT";
-            bindings = <&kp PERIOD>, <&kp QUESTION>;
+            bindings = <&kp PERIOD>, <&kp EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -77,7 +77,7 @@
         upcomma_en: upcomma_en {
             compatible = "zmk,behavior-mod-morph";
             label = "UPCOMMA_EN";
-            bindings = <&commaspace_en>, <&kp COMMA>;
+            bindings = <&commaspace_en>, <&kp QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -90,6 +90,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        altcomma: altcomma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALTCOMMA";
+            bindings = <&commaspace_en>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
