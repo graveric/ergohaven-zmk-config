@@ -86,19 +86,28 @@
         upcomma_ru: upcomma_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "UPCOMMA_RU";
-            bindings = <&commspace_ru>, <&kp QUESTION>;
+            bindings = <&commspace_ru>, <&kp AMPERSAND>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        altcomma: altcomma {
+        altcomma_en: altcomma_en {
             compatible = "zmk,behavior-mod-morph";
-            label = "ALTCOMMA";
-            bindings = <&commaspace_en>, <&kp COMMA>;
+            label = "ALTCOMMA_EN";
+            bindings = <&upcomma_en>, <&kp COMMA>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+            mods = <(MOD_LALT)>;
+        };
+
+        altcomma_ru: altcomma_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALTCOMMA_RU";
+            bindings = <&upcomma_ru>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -264,17 +273,17 @@
             bindings = <
   &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &up_min                                  &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
   &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &up_dot                                  &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &kp K             &kp SQT           &up_                  &upcomma_en       &up_slash                                &kp B    &kp C              &kp M                 &kp W             &kp V
+  &kp K             &kp SQT           &up_                  &altcomma_en      &up_slash                                &kp B    &kp C              &kp M                 &kp W             &kp V
                                                             &kp TAB           &key_repeat  &lt 2 SPACE    &lt 3 ENTER  &lt 8 T  &kp BACKSPACE
             >;
         };
 
         RU {
             bindings = <
-  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                               &kp Y      &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
-  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                               &kp H      &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp C                 &kp V             &kp B                               &kp N      &kp M             &kp COMMA             &kp DOT           &kp MINUS
-                                                            &trans            &upcomma_ru  &trans    &lt 4 ENTER  &kp SLASH  &trans
+  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                                &kp Y      &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
+  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                                &kp H      &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
+  &kp Z             &kp X             &kp C                 &kp V             &kp B                                &kp N      &kp M             &kp COMMA             &kp DOT           &kp MINUS
+                                                            &trans            &altcomma_ru  &trans    &lt 4 ENTER  &kp SLASH  &trans
             >;
         };
 
