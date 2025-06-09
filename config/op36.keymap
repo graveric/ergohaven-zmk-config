@@ -455,7 +455,7 @@
   &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &up_min                                   &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
   &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &up_dot                                   &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
   &kp K             &kp SQT           &up_                  &altcomma_en      &up_slash                                 &kp B    &kp C              &kp M                 &kp W             &kp V
-                                                            &kp TAB           &rep_nav 2 0  &lt 2 SPACE    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
+                                                            &kp TAB           &rep_nav 2 0  &lt 6 SPACE    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
             >;
         };
 
@@ -463,7 +463,7 @@
             bindings = <
   &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                                    &kp Y        &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
   &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                                    &kp H        &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp C                 &kp V             &kp B                                    &kp N        &kp M             &kp COMMA             &kp DOT           &kp MINUS
+  &kp Z             &kp X             &kp C                 &kp V             &kp B                                    &kp N        &kp M             &kp COMMA             &kp DOT           &kp SQT
                                                             &trans            &rucomma_nav 2 0  &trans    &lt 7 ENTER  &lt 4 SLASH  &trans
             >;
         };
@@ -488,9 +488,9 @@
 
         SYM_RU {
             bindings = <
-  &kp LS(EXCL)  &ru_at     &ru_hash   &ru_dollar  &kp LS(PRCNT)                     &kp LS(COLON)  &kp LS(QMARK)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
-  &kp N1        &kp N2     &kp N3     &kp N4      &kp N5                            &kp N6         &kp N7         &kp N8        &kp N9        &kp N0
-  &ru_grave     &ru_tilda  &kp CARET  &kp DOLLAR  &kp BACKSLASH                     &ru_pipe       &ru_ldq        &ru_emdash    &ru_rdq       &trans
+  &kp LS(EXCL)  &ru_at     &ru_hash   &ru_dollar  &kp LS(PRCNT)                     &kp LS(COLON)  &kp HASH  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
+  &kp N1        &kp N2     &kp N3     &kp N4      &kp N5                            &kp N6         &kp N7    &kp N8        &kp N9        &kp N0
+  &ru_grave     &ru_tilda  &kp CARET  &kp DOLLAR  &kp BACKSLASH                     &ru_pipe       &ru_ldq   &ru_emdash    &ru_rdq       &trans
                                       &trans      &mo 5          &kp ESC    &trans  &trans         &trans
             >;
         };
