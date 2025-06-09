@@ -204,24 +204,6 @@
             layers = <0 1>;
         };
 
-        q_en {
-            bindings = <&none>;
-            key-positions = <6 16>;
-            layers = <0>;
-        };
-
-        q_ru {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <16 6>;
-            layers = <1>;
-        };
-
-        exclam {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <13 3>;
-            layers = <0 1>;
-        };
-
         mlck {
             bindings = <&mkp LCLK>;
             key-positions = <33 34>;
@@ -245,6 +227,54 @@
         nord_Z {
             bindings = <&kp Z>;
             key-positions = <18 17 16>;
+        };
+
+        en_gt {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <13 3>;
+            layers = <0>;
+        };
+
+        en_lt {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <12 2>;
+            layers = <0>;
+        };
+
+        en_lbr {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <16 6>;
+            layers = <0>;
+        };
+
+        en_rbr {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <17 7>;
+            layers = <0>;
+        };
+
+        ru_rbrc {
+            bindings = <&ru_rbr>;
+            key-positions = <17 7>;
+            layers = <1>;
+        };
+
+        ru_lbrc {
+            bindings = <&ru_lbr>;
+            key-positions = <16 6>;
+            layers = <1>;
+        };
+
+        ru_gtc {
+            bindings = <&ru_gt>;
+            key-positions = <13 3>;
+            layers = <1>;
+        };
+
+        ru_ltc {
+            bindings = <&ru_lt>;
+            key-positions = <12 2>;
+            layers = <1>;
         };
     };
 
@@ -444,6 +474,58 @@
                 <&macro_wait_time 10>;
 
             label = "EN_LDQ";
+        };
+
+        ru_lbr: ru_lbr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp LEFT_BRACE>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_LBR";
+        };
+
+        ru_rbr: ru_rbr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp RIGHT_BRACE>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_RBR";
+        };
+
+        ru_lt: ru_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp LESS_THAN>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_LT";
+        };
+
+        ru_gt: ru_gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp GREATER_THAN>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_GT";
         };
     };
 
