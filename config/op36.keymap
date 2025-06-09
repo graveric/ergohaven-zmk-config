@@ -379,19 +379,6 @@
             label = "EN_EMDASH";
         };
 
-        ru_backslash: ru_backslash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp NON_US_BACKSLASH>,
-                <&macro_wait_time 10>,
-                <&KB_RU>;
-
-            label = "RU_BACKSLASH";
-        };
-
         ru_at: ru_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -403,6 +390,60 @@
                 <&KB_RU>;
 
             label = "RU_AT";
+        };
+
+        en_rdq: en_rdq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N0 &kp B &kp B &kp ENTER>,
+                <&macro_wait_time 10>;
+
+            label = "EN_RDQ";
+        };
+
+        ru_ldq: ru_ldq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N0 &kp A &kp B &kp ENTER>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_LDQ";
+        };
+
+        ru_rdq: ru_rdq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N0 &kp B &kp B &kp ENTER>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_RDQ";
+        };
+
+        en_ldq: en_ldq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N0 &kp A &kp B &kp ENTER>,
+                <&macro_wait_time 10>;
+
+            label = "EN_LDQ";
         };
     };
 
@@ -438,10 +479,10 @@
 
         sym {
             bindings = <
-  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH       &kp DOLLAR  &kp PERCENT                     &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-  &kp N1           &kp N2         &kp N3         &kp N4      &kp N5                          &kp N6        &kp N7         &kp N8        &kp N9                &kp N0
-  &kp GRAVE        &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI    &kp BSLH                        &kp LS(PIPE)  &kp LS(DQT)    &en_emdash    &kp LS(DQT)           &kp LS(QMARK)
-                                                 &trans      &mo 5        &kp ESC    &trans  &trans        &trans
+  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH       &kp DOLLAR  &kp PERCENT                              &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+  &kp N1           &kp N2         &kp N3         &kp N4      &kp N5                                   &kp N6        &kp N7         &kp N8        &kp N9                &kp N0
+  &kp GRAVE        &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI    &kp NON_US_BACKSLASH                     &kp LS(PIPE)  &en_ldq        &en_emdash    &en_rdq               &kp LS(QMARK)
+                                                 &trans      &mo 5                 &kp ESC    &trans  &trans        &trans
             >;
         };
 
@@ -449,7 +490,7 @@
             bindings = <
   &kp LS(EXCL)  &ru_at     &ru_hash   &ru_dollar  &kp LS(PRCNT)                     &kp LS(COLON)  &kp LS(QMARK)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
   &kp N1        &kp N2     &kp N3     &kp N4      &kp N5                            &kp N6         &kp N7         &kp N8        &kp N9        &kp N0
-  &ru_grave     &ru_tilda  &kp CARET  &kp DOLLAR  &ru_backslash                     &ru_pipe       &trans         &ru_emdash    &trans        &trans
+  &ru_grave     &ru_tilda  &kp CARET  &kp DOLLAR  &kp BACKSLASH                     &ru_pipe       &ru_ldq        &ru_emdash    &ru_rdq       &trans
                                       &trans      &mo 5          &kp ESC    &trans  &trans         &trans
             >;
         };
