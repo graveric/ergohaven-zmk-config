@@ -42,7 +42,7 @@
         up_: up_ {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_";
-            bindings = <&kp UNDERSCORE>, <&kp EXCLAMATION>;
+            bindings = <&kp UNDERSCORE>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -69,7 +69,7 @@
         up_dot: up_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_DOT";
-            bindings = <&kp PERIOD>, <&kp EQUAL>;
+            bindings = <&kp PERIOD>, <&kp EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -131,6 +131,33 @@
             tapping-term-ms = <150>;
             flavor = "balanced";
             hold-while-undecided;
+        };
+
+        alt_min: alt_min {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_MIN";
+            bindings = <&up_min>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        alt_slash: alt_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_SLASH";
+            bindings = <&up_slash>, <&kp BSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        alt_: alt_ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_";
+            bindings = <&up_>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -535,19 +562,19 @@
 
         base {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &up_min                                   &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                                  &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
   &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &up_dot                                   &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &kp K             &kp SQT           &up_                  &altcomma_en      &up_slash                                 &kp B    &kp C              &kp M                 &kp W             &kp V
+  &kp K             &kp SQT           &alt_                 &altcomma_en      &alt_slash                                &kp B    &kp C              &kp M                 &kp W             &kp V
                                                             &kp TAB           &rep_nav 2 0  &lt 6 SPACE    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
             >;
         };
 
         RU {
             bindings = <
-  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                                    &kp Y        &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
-  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                                    &kp H        &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp C                 &kp V             &kp B                                    &kp N        &kp M             &kp COMMA             &kp DOT           &kp SQT
-                                                            &trans            &rucomma_nav 2 0  &trans    &lt 7 ENTER  &lt 4 SLASH  &trans
+  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                                &kp Y        &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
+  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                                &kp H        &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
+  &kp Z             &kp X             &kp C                 &kp V             &kp B                                &kp RS(DOT)  &kp M             &kp COMMA             &altcomma_ru      &up_dot
+                                                            &trans            &rep_nav 2 0  &trans    &lt 7 ENTER  &lt 4 N      &trans
             >;
         };
 
