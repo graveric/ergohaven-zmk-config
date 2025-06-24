@@ -196,10 +196,10 @@
             key-positions = <26 27>;
         };
 
-        equal {
+        z {
             bindings = <&kp EQUAL>;
             key-positions = <16 15>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         undr {
@@ -250,11 +250,6 @@
         mmck {
             bindings = <&mkp MCLK>;
             key-positions = <22 12>;
-        };
-
-        nord_Z {
-            bindings = <&kp Z>;
-            key-positions = <18 17 16>;
         };
 
         en_gt {
