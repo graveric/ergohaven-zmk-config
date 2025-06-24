@@ -197,7 +197,7 @@
         };
 
         z {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp Z>;
             key-positions = <16 15>;
             layers = <0>;
         };
