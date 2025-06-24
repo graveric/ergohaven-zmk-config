@@ -299,6 +299,12 @@
             key-positions = <12 2>;
             layers = <1>;
         };
+
+        ye {
+            bindings = <&kp SQT>;
+            key-positions = <16 15>;
+            layers = <1>;
+        };
     };
 
     macros {
