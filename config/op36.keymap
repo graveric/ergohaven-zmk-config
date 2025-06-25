@@ -198,7 +198,7 @@
 
         z {
             bindings = <&kp Z>;
-            key-positions = <16 15>;
+            key-positions = <16 17>;
             layers = <0>;
         };
 
@@ -210,7 +210,7 @@
 
         s_o {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <16 17>;
+            key-positions = <16 15>;
             layers = <0 1>;
         };
 
@@ -302,7 +302,7 @@
 
         ye {
             bindings = <&kp SQT>;
-            key-positions = <16 15>;
+            key-positions = <16 17>;
             layers = <1>;
         };
     };
