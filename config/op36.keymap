@@ -69,7 +69,7 @@
         up_dot: up_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_DOT";
-            bindings = <&kp PERIOD>, <&kp EXCL>;
+            bindings = <&kp PERIOD>, <&kp SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -155,6 +155,33 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_";
             bindings = <&up_>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        alt_dot_en: alt_dot_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_DOT_EN";
+            bindings = <&up_dot>, <&kp EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        ru_dot: ru_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_DOT";
+            bindings = <&kp SLASH>, <&kp DLLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        alt_dot_ru: alt_dot_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_DOT_RU";
+            bindings = <&ru_dot>, <&kp EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -564,7 +591,7 @@
         base {
             bindings = <
   &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                                  &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &up_dot                                   &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
+  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                               &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
   &kp K             &kp SQT           &alt_                 &altcomma_en      &alt_slash                                &kp B    &kp C              &kp M                 &kp W             &kp V
                                                             &kp TAB           &rep_nav 2 0  &lt 6 SPACE    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
             >;
@@ -574,7 +601,7 @@
             bindings = <
   &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                                &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
   &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                                &kp H    &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp C                 &kp V             &kp B                                &kp DOT  &kp M             &kp COMMA             &altcomma_ru      &kp SLASH
+  &kp Z             &kp X             &kp C                 &kp V             &kp B                                &kp DOT  &kp M             &kp COMMA             &altcomma_ru      &alt_dot_ru
                                                             &trans            &rep_nav 2 0  &trans    &lt 7 ENTER  &lt 4 N  &trans
             >;
         };
