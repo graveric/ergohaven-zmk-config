@@ -51,7 +51,7 @@
         up_min: up_min {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_MIN";
-            bindings = <&kp MINUS>, <&kp PLUS>;
+            bindings = <&kp MINUS>, <&kp LPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -96,7 +96,7 @@
         altcomma_en: altcomma_en {
             compatible = "zmk,behavior-mod-morph";
             label = "ALTCOMMA_EN";
-            bindings = <&upcomma_en>, <&kp COMMA>;
+            bindings = <&ctrl_comma_en>, <&kp COMMA>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -136,7 +136,7 @@
         alt_min: alt_min {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_MIN";
-            bindings = <&up_min>, <&kp EQUAL>;
+            bindings = <&ctrl_min>, <&kp PLUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -163,7 +163,7 @@
         alt_dot_en: alt_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_DOT_EN";
-            bindings = <&up_dot>, <&kp EXCL>;
+            bindings = <&ctrl_dot_en>, <&kp AMPERSAND>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -185,6 +185,33 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+        };
+
+        ctrl_min: ctrl_min {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_MIN";
+            bindings = <&up_min>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ctrl_comma_en: ctrl_comma_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_COMMA_EN";
+            bindings = <&upcomma_en>, <&kp EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ctrl_dot_en: ctrl_dot_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_DOT_EN";
+            bindings = <&up_dot>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
