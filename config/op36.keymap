@@ -145,7 +145,7 @@
         alt_slash: alt_slash {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH";
-            bindings = <&up_slash>, <&kp BSLH>;
+            bindings = <&ctrl_slash>, <&kp PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -154,7 +154,7 @@
         alt_: alt_ {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_";
-            bindings = <&up_>, <&kp LESS_THAN>;
+            bindings = <&ctrl_>, <&kp EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -209,6 +209,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_EN";
             bindings = <&up_dot>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ctrl_: ctrl_ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_";
+            bindings = <&up_>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ctrl_slash: ctrl_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_SLASH";
+            bindings = <&up_slash>, <&kp BSLH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -617,10 +635,10 @@
 
         base {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                                  &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                               &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &kp K             &kp SQT           &alt_                 &altcomma_en      &alt_slash                                &kp B    &kp C              &kp M                 &kp W             &kp V
-                                                            &kp TAB           &rep_nav 2 0  &lt 6 SPACE    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                               &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
+  &kp K             &kp SQT           &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
+                                                            &kp TAB           &lt 2 SPACE  &mkp LCLK    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
             >;
         };
 
@@ -638,7 +656,7 @@
   &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                          &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
   &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                        &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
   &kp LC(Z)    &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                     &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
-                                                &trans           &trans        &trans    &kp ESC  &mo 5         &kp DEL
+                                                &trans           &trans        &trans    &kp ESC  &mo 5         &kp BSPC
             >;
         };
 
