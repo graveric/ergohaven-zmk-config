@@ -105,7 +105,7 @@
         altcomma_ru: altcomma_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALTCOMMA_RU";
-            bindings = <&upcomma_ru>, <&kp QUESTION>;
+            bindings = <&ctrl_comma_ru>, <&kp QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -181,7 +181,7 @@
         alt_dot_ru: alt_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_DOT_RU";
-            bindings = <&ru_dot>, <&kp EXCL>;
+            bindings = <&ctrl_dot_ru>, <&kp EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -257,6 +257,33 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+        };
+
+        ctrl_comma_ru: ctrl_comma_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_COMMA_RU";
+            bindings = <&upcomma_ru>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        up_dot_ru: up_dot_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_DOT_RU";
+            bindings = <&ru_dot>, <&kp RU_SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ctrl_dot_ru: ctrl_dot_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_DOT_RU";
+            bindings = <&up_dot_ru>, <&kp RU_COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -677,10 +704,10 @@
 
         RU {
             bindings = <
-  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                                &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
-  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                                &kp H    &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp C                 &kp V             &kp B                                &kp DOT  &kp M             &kp COMMA             &altcomma_ru      &alt_dot_ru
-                                                            &trans            &rep_nav 2 0  &trans    &lt 7 ENTER  &lt 4 N  &trans
+  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                               &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
+  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                               &kp H    &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
+  &kp Z             &kp X             &kp C                 &kp V             &kp B                               &kp DOT  &kp M             &kp COMMA             &altcomma_ru      &alt_dot_ru
+                                                            &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 N  &trans
             >;
         };
 
