@@ -231,6 +231,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        up_inch: up_inch {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_INCH";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp SQT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ctrl_inch: ctrl_inch {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_INCH";
+            bindings = <&up_inch>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        alt_inch: alt_inch {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_INCH";
+            bindings = <&ctrl_inch>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -375,6 +402,12 @@
         ye {
             bindings = <&kp SQT>;
             key-positions = <16 17>;
+            layers = <1>;
+        };
+
+        ru_minus {
+            bindings = <&alt_min>;
+            key-positions = <3 4>;
             layers = <1>;
         };
     };
@@ -637,7 +670,7 @@
             bindings = <
   &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                               &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
   &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &kp K             &kp SQT           &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
+  &kp K             &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
                                                             &kp TAB           &lt 2 SPACE  &mkp LCLK    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
             >;
         };
