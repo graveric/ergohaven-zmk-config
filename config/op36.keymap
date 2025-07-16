@@ -704,9 +704,9 @@
 
         RU {
             bindings = <
-  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) R  &kp T                               &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
-  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL D          &hml LSHFT F      &kp G                               &kp H    &hmr RSHFT J      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp C                 &kp V             &kp B                               &kp DOT  &kp M             &kp COMMA             &altcomma_ru      &alt_dot_ru
+  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) J  &hml LC(LSHFT) R  &kp E                               &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
+  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL T          &hml LSHFT F      &alt_dot_ru                         &kp H    &hmr RSHFT D      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
+  &kp Z             &kp X             &kp M                 &altcomma_ru      &kp B                               &kp DOT  &kp C             &kp V                 &kp G             &kp COMMA
                                                             &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 N  &trans
             >;
         };
