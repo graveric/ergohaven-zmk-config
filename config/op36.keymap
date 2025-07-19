@@ -346,12 +346,6 @@
             layers = <0 1>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <13 12>;
-            layers = <0 1>;
-        };
-
         plus {
             bindings = <&kp PLUS>;
             key-positions = <11 12>;
@@ -376,18 +370,6 @@
         mmck {
             bindings = <&mkp MCLK>;
             key-positions = <22 12>;
-        };
-
-        en_gt {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <13 3>;
-            layers = <0>;
-        };
-
-        en_lt {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <12 2>;
-            layers = <0>;
         };
 
         en_lbr {
@@ -436,6 +418,40 @@
             bindings = <&alt_min>;
             key-positions = <3 4>;
             layers = <1>;
+        };
+
+        ru_und {
+            bindings = <&alt_>;
+            key-positions = <13 14>;
+            layers = <1>;
+        };
+
+        ru_sl {
+            bindings = <&alt_slash>;
+            key-positions = <24 23>;
+        };
+
+        c_s {
+            bindings = <&kp LC(S)>;
+            key-positions = <13 12>;
+            layers = <0 1>;
+        };
+
+        c_c {
+            bindings = <&kp LC(C)>;
+            key-positions = <13 3>;
+            layers = <0 1>;
+        };
+
+        c_x {
+            bindings = <&kp LC(X)>;
+            key-positions = <14 4>;
+            layers = <0 1>;
+        };
+
+        c_v {
+            bindings = <&kp LC(V)>;
+            key-positions = <12 2>;
         };
     };
 
@@ -697,16 +713,16 @@
             bindings = <
   &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                               &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
   &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &kp K             &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
+  &lt 8 K           &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
                                                             &kp TAB           &lt 2 SPACE  &mkp LCLK    &lt 7 ENTER  &lt 3 T  &kp BACKSPACE
             >;
         };
 
         RU {
             bindings = <
-  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) J  &hml LC(LSHFT) R  &kp E                               &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
-  &hml LEFT_GUI A   &hml LALT S       &hml LCTRL T          &hml LSHFT F      &alt_dot_ru                         &kp H    &hmr RSHFT D      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp Z             &kp X             &kp M                 &altcomma_ru      &kp B                               &kp DOT  &kp C             &kp V                 &kp G             &kp COMMA
+  &hml RIGHT_ALT Q  &hml LA(LCTRL) W  &hml LS(LA(LCTRL)) J  &hml LC(LSHFT) E  &kp DOT                             &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) I  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
+  &hml LEFT_GUI A   &hml LALT B       &hml LCTRL T          &hml LSHFT F      &alt_dot_ru                         &kp H    &hmr RSHFT D      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
+  &kp Z             &kp X             &kp M                 &altcomma_ru      &kp S                               &kp R    &kp C             &kp V                 &kp G             &kp COMMA
                                                             &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 N  &trans
             >;
         };
@@ -762,6 +778,15 @@
   &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))                       &kp LS(LG(UP))          &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
   &kp LG(M)      &kp LG(LC(K))  &kp LC(LG(H))  &kp LC(LG(L))  &kp LC(LG(J))                       &kp LS(LG(DOWN_ARROW))  &kp LG(M)       &kp LA(F3)      &kp LC(LG(A))    &kp LG(D)
                                                &kp LG(ENTER)  &kp LG(K)      &kp LG(J)    &trans  &trans                  &trans
+            >;
+        };
+
+        shortcuts {
+            bindings = <
+  &trans  &kp LC(Q)  &kp LS(LC(I))  &kp LS(LC(R))  &kp LC(T)                              &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(RU_MINUS)
+  &trans  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                              &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
+  &trans  &kp LALT   &kp LC(G)      &kp LC(R)      &kp LC(H)                              &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LSHFT
+                                    &kp LC(X)      &kp LC(C)  &kp LC(V)    &kp LS(LC(Z))  &kp LC(Z)      &kp LC(W)
             >;
         };
     };
