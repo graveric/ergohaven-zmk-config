@@ -453,6 +453,12 @@
             bindings = <&kp LC(V)>;
             key-positions = <12 2>;
         };
+
+        ch_smn {
+            bindings = <&kp X>;
+            key-positions = <16 17>;
+            layers = <9>;
+        };
     };
 
     macros {
