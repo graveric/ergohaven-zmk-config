@@ -792,10 +792,10 @@
 
         shmnkz {
             bindings = <
-  &kp A  &kp S    &kp J  &kp E         &kp M                          &kp I     &kp V   &kp Y  &kp R  &kp P
-  &kp Q  &kp B    &kp T  &kp F         &alt_dot_ru                    &kp SEMI  &kp C   &kp H  &kp D  &kp U
-  &kp O  &kp DOT  &kp Z  &altcomma_ru  &kp APOS                       &kp W     &kp L   &kp K  &kp G  &kp COMMA
-                         &to 0         &trans       &trans    &trans  &kp N     &trans
+  &kp A  &kp S    &kp J  &kp E         &kp M                                  &kp I     &kp V   &kp Y  &kp R  &kp P
+  &kp Q  &kp B    &kp T  &kp F         &alt_dot_ru                            &kp SEMI  &kp C   &kp H  &kp D  &kp U
+  &kp O  &kp DOT  &kp Z  &altcomma_ru  &kp APOS                               &kp W     &kp L   &kp K  &kp G  &kp COMMA
+                         &to 0         &trans       &kp LEFT_SHIFT    &trans  &kp N     &trans
             >;
         };
     };
