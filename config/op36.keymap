@@ -293,11 +293,13 @@
         kha {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
+            layers = <0 1>;
         };
 
         hrdsgn {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
+            layers = <0 1 9>;
         };
 
         TO_RU {
@@ -454,8 +456,14 @@
             key-positions = <12 2>;
         };
 
-        ch_smn {
-            bindings = <&kp X>;
+        f_shmn {
+            bindings = <&kp A>;
+            key-positions = <6 7>;
+            layers = <9>;
+        };
+
+        sch_shmn {
+            bindings = <&kp O>;
             key-positions = <16 17>;
             layers = <9>;
         };
@@ -798,10 +806,10 @@
 
         shmnkz {
             bindings = <
-  &kp A  &kp S    &kp J  &kp E         &kp M                                  &kp I     &kp V   &kp Y  &kp R  &kp P
-  &kp Q  &kp B    &kp T  &kp F         &alt_dot_ru                            &kp SEMI  &kp C   &kp H  &kp D  &kp U
-  &kp O  &kp DOT  &kp Z  &altcomma_ru  &kp APOS                               &kp W     &kp L   &kp K  &kp G  &kp COMMA
-                         &to 0         &trans       &kp LEFT_SHIFT    &trans  &kp N     &trans
+  &kp LEFT_BRACKET  &kp S    &kp E  &kp J         &kp M                                  &kp I  &kp Y         &kp V  &kp R  &kp P
+  &kp Q             &kp B    &kp T  &hml LSHFT F  &alt_dot_ru                            &kp X  &hmr RSHFT H  &kp C  &kp D  &kp U
+  &kp SEMI          &kp DOT  &kp Z  &altcomma_ru  &kp APOS                               &kp W  &kp K         &kp L  &kp G  &kp COMMA
+                                    &to 0         &trans       &kp LEFT_SHIFT    &trans  &kp N  &trans
             >;
         };
     };
