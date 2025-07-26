@@ -411,7 +411,7 @@
         };
 
         ru_sch {
-            bindings = <&kp SQT>;
+            bindings = <&kp O>;
             key-positions = <16 17>;
             layers = <1>;
         };
