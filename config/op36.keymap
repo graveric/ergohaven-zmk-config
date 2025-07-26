@@ -293,13 +293,13 @@
         kha {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         hrdsgn {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <0 1 9>;
+            layers = <0 1>;
         };
 
         TO_RU {
@@ -410,7 +410,7 @@
             layers = <1>;
         };
 
-        ye {
+        ru_sch {
             bindings = <&kp SQT>;
             key-positions = <16 17>;
             layers = <1>;
@@ -459,13 +459,7 @@
         f_shmn {
             bindings = <&kp A>;
             key-positions = <6 7>;
-            layers = <9>;
-        };
-
-        sch_shmn {
-            bindings = <&kp O>;
-            key-positions = <16 17>;
-            layers = <9>;
+            layers = <1>;
         };
     };
 
@@ -734,10 +728,10 @@
 
         RU {
             bindings = <
-  &hml RIGHT_ALT A  &hml LA(LCTRL) S  &hml LS(LA(LCTRL)) J  &hml LC(LSHFT) E  &kp Z                               &kp Y    &hmr LC(RSHFT) U  &hmr LS(LA(LCTRL)) R  &hmr LA(LCTRL) O  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Q   &hml LALT B       &hml LCTRL T          &hml LSHFT F      &alt_dot_ru                         &kp H    &hmr RSHFT D      &hmr RCTRL K          &hmr LALT L       &hmr LEFT_GUI SEMICOLON
-  &kp X             &kp DOT           &kp W                 &altcomma_ru      &kp M                               &kp I    &kp C             &kp V                 &kp G             &kp COMMA
-                                                            &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 N  &trans
+  &hml RIGHT_ALT LEFT_BRACKET  &hml LA(LCTRL) S  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) J  &kp M                               &kp I    &hmr LC(RSHFT) H  &hmr LS(LA(LCTRL)) V  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Q              &hml LALT B       &hml LCTRL T          &hml LSHFT F      &alt_dot_ru                         &kp X    &hmr RSHFT Y      &hmr RCTRL C          &hmr LALT D       &hmr LEFT_GUI U
+  &kp SEMI                     &kp DOT           &kp Z                 &altcomma_ru      &kp SQT                             &kp W    &kp K             &kp L                 &kp G             &kp COMMA
+                                                                       &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 N  &trans
             >;
         };
 
@@ -772,7 +766,7 @@
             bindings = <
   &bootloader  &kp F1        &kp F2         &kp F3         &kp F4                     &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
   &kp LGUI     &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8                     &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-  &to 9        &kp F9        &kp F10        &kp F11        &kp F12                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
+  &trans       &kp F9        &kp F10        &kp F11        &kp F12                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
                                             &trans         &trans   &trans    &trans  &trans        &trans
             >;
         };
@@ -801,15 +795,6 @@
   &trans  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                              &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
   &trans  &kp LALT   &kp LC(G)      &kp LC(R)      &kp LC(H)                              &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LSHFT
                                     &kp LC(X)      &kp LC(C)  &kp LC(V)    &kp LS(LC(Z))  &kp LC(Z)      &kp LC(W)
-            >;
-        };
-
-        shmnkz {
-            bindings = <
-  &kp LEFT_BRACKET  &kp S    &kp E  &kp J         &kp M                                  &kp I  &kp Y         &kp V  &kp R  &kp P
-  &kp Q             &kp B    &kp T  &hml LSHFT F  &alt_dot_ru                            &kp X  &hmr RSHFT H  &kp C  &kp D  &kp U
-  &kp SEMI          &kp DOT  &kp Z  &altcomma_ru  &kp APOS                               &kp W  &kp K         &kp L  &kp G  &kp COMMA
-                                    &to 0         &trans       &kp LEFT_SHIFT    &trans  &kp N  &trans
             >;
         };
     };
