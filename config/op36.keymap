@@ -739,7 +739,7 @@
             bindings = <
   &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                          &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
   &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                        &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
-  &kp LC(Z)    &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                     &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
+  &mo 9        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                     &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
                                                 &trans           &trans        &trans    &kp ESC  &mo 5         &kp BSPC
             >;
         };
@@ -795,6 +795,15 @@
   &trans  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                              &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
   &trans  &kp LALT   &kp LC(G)      &kp LC(R)      &kp LC(H)                              &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LSHFT
                                     &kp LC(X)      &kp LC(C)  &kp LC(V)    &kp LS(LC(Z))  &kp LC(Z)      &kp LC(W)
+            >;
+        };
+
+        mouse {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans
+  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans          &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &trans
+                          &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
