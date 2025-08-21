@@ -728,10 +728,10 @@
 
         RU {
             bindings = <
-  &hml RIGHT_ALT O  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) J  &hml LC(LSHFT) SEMI  &kp DOT                             &kp I             &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Q   &hml LALT B       &hml LCTRL T          &hml LSHFT F         &alt_dot_ru                         &kp U             &hmr RSHFT C      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI COMMA
-  &kp Z             &kp S             &kp M                 &altcomma_ru         &kp SQT                             &kp LEFT_BRACKET  &kp L             &kp K                 &kp G             &kp X
-                                                            &trans               &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 N           &trans
+  &hml RIGHT_ALT O  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) J  &hml LC(LSHFT) Z  &kp DOT                             &kp I             &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Q   &hml LALT B       &hml LCTRL F          &hml LSHFT T      &alt_dot_ru                         &kp U             &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI COMMA
+  &kp SEMI          &kp S             &kp M                 &altcomma_ru      &kp SQT                             &kp LEFT_BRACKET  &kp L             &kp K                 &kp G             &kp X
+                                                            &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 C           &trans
             >;
         };
 
