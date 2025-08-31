@@ -413,7 +413,7 @@
 
         undr {
             bindings = <&alt_ru_>;
-            key-positions = <14 13>;
+            key-positions = <11 10>;
             layers = <1>;
         };
 
