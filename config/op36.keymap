@@ -337,7 +337,7 @@
             bindings = <&ctrl_ru_>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
 
         ru_upinch: ru_upinch {
@@ -413,7 +413,7 @@
 
         undr {
             bindings = <&alt_ru_>;
-            key-positions = <11 10>;
+            key-positions = <10 11>;
             layers = <1>;
         };
 
@@ -481,7 +481,7 @@
 
         ru_sl {
             bindings = <&alt_slash_ru>;
-            key-positions = <24 23>;
+            key-positions = <20 21>;
         };
 
         c_s {
