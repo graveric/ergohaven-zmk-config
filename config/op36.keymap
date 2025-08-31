@@ -712,6 +712,59 @@
 
             label = "RU_GT";
         };
+
+        en_endash: en_endash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp NUMBER_0 &kp N1 &kp NUMBER_3 &kp ENTER>,
+                <&macro_wait_time 10>;
+
+            label = "EN_ENDASH";
+        };
+
+        ru_endash: ru_endash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp NUMBER_0 &kp N1 &kp NUMBER_3 &kp ENTER>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_ENDASH";
+        };
+
+        en_number: en_number {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_RU>,
+                <&macro_wait_time 10>,
+                <&kp LS(NUMBER_3)>,
+                <&macro_wait_time 10>,
+                <&KB_EN>;
+
+            label = "EN_NUMBER";
+        };
+
+        ru_caret: ru_krs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp CARET>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_KRS";
+        };
     };
 
     keymap {
@@ -746,19 +799,19 @@
 
         sym {
             bindings = <
-  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH       &kp DOLLAR  &kp PERCENT                              &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-  &kp N1           &kp N2         &kp N3         &kp N4      &kp N5                                   &kp N6        &kp N7         &kp N8        &kp N9                &kp N0
-  &kp GRAVE        &kp LS(TILDE)  &kp LS(COLON)  &kp SEMI    &kp NON_US_BACKSLASH                     &kp LS(PIPE)  &en_ldq        &en_emdash    &en_rdq               &kp LS(QMARK)
-                                                 &trans      &mo 5                 &kp ESC    &trans  &trans        &trans
+  &en_number           &hml LC(LEFT_ALT) N9    &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7   &kp PERCENT                     &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LEFT_SHIFT N1  &kp HASH                        &en_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &kp TILDE            &kp N6                  &kp NUMBER_5           &kp NUMBER_4        &kp AT_SIGN                     &en_endash  &kp F1             &kp F6                 &kp F7                &kp F12
+                                                                      &en_rdq             &lt 5 N0     &en_ldq    &trans  &trans      &trans
             >;
         };
 
         SYM_RU {
             bindings = <
-  &kp LS(EXCL)  &ru_at     &ru_hash   &ru_dollar  &kp LS(PRCNT)                     &kp LS(COLON)  &kp HASH  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
-  &kp N1        &kp N2     &kp N3     &kp N4      &kp N5                            &kp N6         &kp N7    &kp N8        &kp N9        &kp N0
-  &ru_grave     &ru_tilda  &kp CARET  &kp DOLLAR  &kp BACKSLASH                     &ru_pipe       &ru_ldq   &ru_emdash    &ru_rdq       &trans
-                                      &trans      &mo 5          &kp ESC    &trans  &trans         &trans
+  &kp LS(NUMBER_3)     &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &kp LS(PRCNT)                     &ru_caret   &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &ru_hash                          &ru_endash  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                            &ru_emdash  &kp F1               &kp F6                 &kp F7                &kp F12
+                                                                           &ru_rdq             &lt 5 N0       &ru_ldq    &trans  &trans      &trans
             >;
         };
 
