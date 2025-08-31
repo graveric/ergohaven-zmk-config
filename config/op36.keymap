@@ -298,7 +298,7 @@
         ctrl_slash_ru: ctrl_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_SLASH_RU";
-            bindings = <&up_slash_ru>, <&ru_backslash>;
+            bindings = <&up_slash_ru>, <&ru_bkslsh>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -827,19 +827,6 @@
             label = "RU_KRS";
         };
 
-        ru_backslash: ru_backslash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp NUBS>,
-                <&macro_wait_time 10>,
-                <&KB_RU>;
-
-            label = "RU_BACKSLASH";
-        };
-
         ru_apostrophe: ru_up_inch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -877,6 +864,19 @@
                 <&KB_RU>;
 
             label = "RU_SLASH";
+        };
+
+        ru_bkslsh: ru_backslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 10>,
+                <&kp BACKSLASH>,
+                <&macro_wait_time 10>,
+                <&KB_RU>;
+
+            label = "RU_BACKSLASH";
         };
     };
 
