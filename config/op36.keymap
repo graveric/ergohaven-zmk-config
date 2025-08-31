@@ -412,7 +412,7 @@
         };
 
         undr {
-            bindings = <&alt_slash_ru>;
+            bindings = <&alt_ru_>;
             key-positions = <14 13>;
             layers = <1>;
         };
@@ -476,12 +476,6 @@
         ru_minus {
             bindings = <&alt_min>;
             key-positions = <3 4>;
-            layers = <1>;
-        };
-
-        ru_und {
-            bindings = <&alt_>;
-            key-positions = <13 14>;
             layers = <1>;
         };
 
