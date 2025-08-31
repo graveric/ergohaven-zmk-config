@@ -461,6 +461,16 @@
             key-positions = <6 7>;
             layers = <1>;
         };
+
+        c_z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <23 22>;
+        };
+
+        cs_z {
+            bindings = <&kp LS(LC(Z))>;
+            key-positions = <22 21>;
+        };
     };
 
     macros {
