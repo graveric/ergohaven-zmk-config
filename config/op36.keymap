@@ -885,28 +885,28 @@
 
         base {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                             &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                          &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &lt 8 K           &alt_inch         &alt_                 &altcomma_en      &alt_slash                           &kp B    &kp C              &kp M                 &kp W             &kp V
-                                                            &key_repeat       &lt 2 SPACE  &kp TAB    &lt 7 ENTER  &lt 3 T  &key_repeat
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                               &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
+  &lt 8 K           &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
+                                                            &key_repeat       &lt 2 SPACE  &kp TAB    &kp BACKSPACE  &lt 3 T  &key_repeat
             >;
         };
 
         RU {
             bindings = <
-  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) Z  &kp DOT                             &kp I    &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Q   &hml LALT B       &hml LCTRL J          &hml LSHFT T      &alt_dot_ru                         &kp U    &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI COMMA
-  &kp SEMI          &kp S             &kp M                 &altcomma_ru      &kp SQT                             &kp O    &kp L             &kp K                 &kp G             &kp X
-                                                            &trans            &lt 2 SPACE  &trans    &lt 7 ENTER  &lt 4 C  &trans
+  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) Z  &kp DOT                               &kp I    &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Q   &hml LALT B       &hml LCTRL J          &hml LSHFT T      &alt_dot_ru                           &kp U    &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI COMMA
+  &kp SEMI          &kp S             &kp M                 &altcomma_ru      &kp SQT                               &kp O    &kp L             &kp K                 &kp G             &kp X
+                                                            &trans            &lt 2 SPACE  &trans    &kp BACKSPACE  &lt 4 C  &trans
             >;
         };
 
         nav {
             bindings = <
-  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                          &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
-  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                        &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
-  &mo 9        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                     &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
-                                                &trans           &trans        &trans    &kp ESC  &mo 5         &kp BSPC
+  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                              &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
+  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                            &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
+  &mo 9        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                         &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
+                                                &trans           &trans        &trans    &lt 7 ENTER  &lt 5 ESC     &kp DEL
             >;
         };
 
