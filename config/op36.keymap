@@ -885,9 +885,9 @@
 
         base {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) O  &hml LC(LSHFT) U  &alt_min                               &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI H       &hml LALT I       &hml LEFT_CONTROL E   &hml LSHFT A      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
-  &lt 8 K           &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp M                 &kp W             &kp V
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                               &kp Q    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) W  &hmr RIGHT_ALT X
+  &hml LGUI F       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI M
+  &lt 8 K           &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp H                 &kp L             &kp V
                                                             &key_repeat       &lt 2 SPACE  &kp TAB    &kp BACKSPACE  &lt 3 T  &key_repeat
             >;
         };
