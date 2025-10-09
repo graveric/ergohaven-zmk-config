@@ -425,12 +425,12 @@
 
         mlck {
             bindings = <&mkp LCLK>;
-            key-positions = <33 34>;
+            key-positions = <31 32>;
         };
 
         mrck {
             bindings = <&mkp RCLK>;
-            key-positions = <35 34>;
+            key-positions = <30 31>;
         };
 
         mrck2 {
@@ -521,6 +521,18 @@
         cs_z {
             bindings = <&kp LS(LC(Z))>;
             key-positions = <22 21>;
+        };
+
+        cbksp {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <33 34>;
+            layers = <0 1>;
+        };
+
+        sdel {
+            bindings = <&kp LS(DEL)>;
+            key-positions = <35 34>;
+            layers = <1 0>;
         };
     };
 
