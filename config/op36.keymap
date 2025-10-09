@@ -911,6 +911,8 @@
   &kp SEMI          &kp S             &kp M                 &altcomma_ru      &kp SQT                               &kp O    &kp L             &kp K                 &kp G             &kp X
                                                             &trans            &lt 2 SPACE  &trans    &kp BACKSPACE  &lt 4 C  &trans
             >;
+
+            display-name = "Base";
         };
 
         nav {
@@ -920,6 +922,8 @@
   &mo 9        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                       &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
                                                 &trans           &trans        &trans    &lt 7 ESC  &lt 5 ENTER   &kp DEL
             >;
+
+            display-name = "Navigation";
         };
 
         sym {
@@ -938,6 +942,8 @@
   &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                            &ru_emdash  &kp F1               &kp F6                 &kp F7                &kp F12
                                                                            &ru_rdq             &lt 5 N0       &ru_ldq    &trans  &trans      &trans
             >;
+
+            display-name = "Symbols";
         };
 
         adj {
@@ -947,6 +953,8 @@
   &trans       &kp F9        &kp F10        &kp F11        &kp F12                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
                                             &trans         &trans   &trans    &trans  &trans        &trans
             >;
+
+            display-name = "Adjust";
         };
 
         fn_layer {
