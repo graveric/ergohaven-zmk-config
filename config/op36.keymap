@@ -903,10 +903,10 @@
 
         nav {
             bindings = <
-  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                              &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
-  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                            &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
-  &mo 9        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                         &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
-                                                &trans           &trans        &trans    &lt 7 ENTER  &lt 5 ESC     &kp DEL
+  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                            &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
+  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                          &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
+  &mo 9        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                       &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
+                                                &trans           &trans        &trans    &lt 7 ESC  &lt 5 ENTER   &kp DEL
             >;
         };
 
