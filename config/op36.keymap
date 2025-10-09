@@ -529,7 +529,7 @@
             layers = <0 1>;
         };
 
-        sdel {
+        sdelete {
             bindings = <&kp LS(DEL)>;
             key-positions = <35 34>;
             layers = <1 0>;
