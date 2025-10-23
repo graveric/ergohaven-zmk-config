@@ -366,6 +366,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        Rep_shift: Rep_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REP_SHIFT";
+            bindings = <&kp>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <10>;
+        };
     };
 
     combos {
@@ -897,10 +907,10 @@
 
         base {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                               &kp W    &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                            &kp P    &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
-  &lt 8 Q           &alt_inch         &alt_                 &altcomma_en      &alt_slash                             &kp B    &kp C              &kp L                 &kp M             &kp V
-                                                            &key_repeat       &lt 2 SPACE  &kp TAB    &kp BACKSPACE  &lt 3 T  &key_repeat
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U    &alt_min                                 &kp W    &hmr LC(LSHIFT) G   &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E        &alt_dot_en                              &kp P    &hmr RSHIFT D       &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
+  &lt 8 Q           &alt_inch         &alt_                 &altcomma_en        &alt_slash                               &kp B    &kp C               &kp L                 &kp M             &kp V
+                                                            &Rep_shift LSHFT 0  &lt 2 SPACE  &lt 8 TAB    &kp BACKSPACE  &lt 3 T  &Rep_shift RSHFT 0
             >;
         };
 
