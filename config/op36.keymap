@@ -418,7 +418,7 @@
         hrdsgn {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         TO_RU {
@@ -431,11 +431,6 @@
             bindings = <&KB_EN>;
             key-positions = <27 28>;
             layers = <1>;
-        };
-
-        yo {
-            bindings = <&kp GRAVE>;
-            key-positions = <2 3>;
         };
 
         Fn {
@@ -457,7 +452,7 @@
 
         rusinch {
             bindings = <&alt_ru_inch>;
-            key-positions = <17 18>;
+            key-positions = <7 8>;
             layers = <1>;
         };
 
@@ -505,7 +500,7 @@
             layers = <1>;
         };
 
-        ru_sch {
+        ru_tz {
             bindings = <&kp W>;
             key-positions = <16 17>;
             layers = <1>;
@@ -571,6 +566,17 @@
             bindings = <&kp LS(DEL)>;
             key-positions = <35 34>;
             layers = <1 0>;
+        };
+
+        tvrd {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <3 2>;
+            layers = <1>;
+        };
+
+        ru_sch {
+            bindings = <&kp O>;
+            key-positions = <17 18>;
         };
     };
 
@@ -933,7 +939,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        base_en {
             bindings = <
   &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U    &alt_min                                 &kp W    &hmr LC(LSHIFT) G   &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
   &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E        &alt_dot_en                              &kp P    &hmr RSHIFT D       &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
@@ -942,15 +948,15 @@
             >;
         };
 
-        RU {
+        base_ru {
             bindings = <
-  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) Z  &kp DOT                               &kp I    &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Q   &hml LALT B       &hml LCTRL J          &hml LSHFT T      &alt_dot_ru                           &kp U    &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-  &kp SEMI          &kp S             &kp M                 &altcomma_ru      &kp SQT                               &kp O    &kp L             &kp K                 &kp G             &kp COMMA
-                                                            &trans            &lt 2 SPACE  &trans    &kp BACKSPACE  &lt 4 C  &trans
+  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &kp SQT                               &kp I      &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Z   &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                           &kp U      &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+  &kp Q             &kp S             &kp M                 &altcomma_ru        &kp GRAVE                             &kp COMMA  &kp L             &kp K                 &kp G             &kp SEMI
+                                                            &trans              &lt 2 SPACE  &trans    &kp BACKSPACE  &lt 4 C    &trans
             >;
 
-            display-name = "Base";
+            display-name = "ru";
         };
 
         nav {
@@ -981,7 +987,7 @@
                                                                            &ru_rdq             &lt 5 N0       &ru_ldq    &trans  &trans      &trans
             >;
 
-            display-name = "Symbols";
+            display-name = "Symbols_ru";
         };
 
         adj {
