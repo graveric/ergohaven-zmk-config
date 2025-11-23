@@ -578,6 +578,12 @@
             bindings = <&kp O>;
             key-positions = <17 18>;
         };
+
+        ru_sch2 {
+            bindings = <&kp O>;
+            key-positions = <26 27>;
+            layers = <1>;
+        };
     };
 
     macros {
