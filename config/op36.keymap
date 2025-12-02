@@ -467,8 +467,8 @@
             key-positions = <31 32>;
         };
 
-        mrck {
-            bindings = <&mkp RCLK>;
+        guii {
+            bindings = <&kp LEFT_GUI>;
             key-positions = <30 31>;
         };
 
