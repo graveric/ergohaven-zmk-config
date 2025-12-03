@@ -468,7 +468,7 @@
         };
 
         guii {
-            bindings = <&kp LEFT_GUI>;
+            bindings = <&sl 8>;
             key-positions = <30 31>;
         };
 
@@ -1033,10 +1033,10 @@
 
         mouse {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans
-  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-  &mo 8   &trans  &trans  &trans  &trans                    &trans          &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &trans
-                          &trans  &trans  &trans    &trans  &trans          &trans
+  &trans        &sk LC(LEFT_ALT)  &sk LA(LS(LEFT_CONTROL))  &sk LC(LSHFT)  &trans                    &msc SCRL_UP    &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans
+  &sk LEFT_GUI  &sk LEFT_ALT      &sk LCTRL                 &sk LSHFT      &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+  &mo 8         &trans            &trans                    &trans         &trans                    &trans          &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &trans
+                                                            &trans         &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
