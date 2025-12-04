@@ -405,9 +405,9 @@
             label = "OLD_HMR";
         };
 
-        Ctrl_Bksp: Ctrl_Bksp {
+        Mod_something: Mod_something {
             compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_BKSP";
+            label = "MOD_SOMETHING";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -951,19 +951,19 @@
 
         base_en {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U    &alt_min                                              &kp W    &hmr LC(LSHIFT) G   &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E        &alt_dot_en                                           &kp P    &hmr RSHIFT D       &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
-  &lt 7 Q           &alt_inch         &alt_                 &altcomma_en        &alt_slash                                            &kp B    &kp C               &kp L                 &kp M             &kp V
-                                                            &Rep_shift LSHFT 0  &lt 2 SPACE  &lt 7 TAB    &Ctrl_Bksp LCTRL BACKSPACE  &lt 3 T  &Rep_shift RSHFT 0
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U    &alt_min                                     &kp W                   &hmr LC(LSHIFT) G   &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E        &alt_dot_en                                  &kp P                   &hmr RSHIFT D       &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
+  &lt 7 Q           &alt_inch         &alt_                 &altcomma_en        &alt_slash                                   &kp B                   &kp C               &kp L                 &kp M             &kp V
+                                                            &Rep_shift LSHFT 0  &lt 7 TAB    &lt 2 SPACE    &lt 3 BACKSPACE  &Mod_something LCTRL T  &Rep_shift RSHFT 0
             >;
         };
 
         base_ru {
             bindings = <
-  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &kp SQT                        &kp I      &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Z   &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                    &kp U      &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-  &lt 7 Q           &kp S             &kp M                 &altcomma_ru        &kp GRAVE                      &kp COMMA  &kp L             &kp K                 &kp G             &kp SEMI
-                                                            &trans              &lt 2 SPACE  &trans    &trans  &lt 4 C    &trans
+  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &kp SQT                                 &kp I                   &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Z   &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                             &kp U                   &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+  &lt 7 Q           &kp S             &kp M                 &altcomma_ru        &kp GRAVE                               &kp COMMA               &kp L             &kp K                 &kp G             &kp SEMI
+                                                            &trans              &trans       &trans    &lt 4 BACKSPACE  &Mod_something LCTRL C  &trans
             >;
 
             display-name = "ru";
@@ -972,9 +972,9 @@
         nav {
             bindings = <
   &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                            &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
-  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp ENTER                          &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
-  &mo 8        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                       &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &none
-                                                &trans           &trans        &trans    &lt 6 ESC  &lt 5 ENTER   &kp DEL
+  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                            &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
+  &mo 8        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                       &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &kp LS(ENTER)
+                                                &trans           &trans        &trans    &lt 5 ESC  &lt 6 ENTER   &kp DEL
             >;
 
             display-name = "Navigation";
@@ -982,19 +982,19 @@
 
         sym {
             bindings = <
-  &en_number           &hml LC(LEFT_ALT) N9    &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7   &kp PERCENT                     &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LEFT_SHIFT N1  &kp HASH                        &en_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &kp TILDE            &kp N6                  &kp NUMBER_5           &kp NUMBER_4        &kp AT_SIGN                     &en_endash  &kp F1             &kp F6                 &kp F7                &kp F12
-                                                                      &en_rdq             &lt 5 N0     &en_ldq    &trans  &trans      &trans
+  &en_number           &hml LC(LEFT_ALT) N9    &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7   &kp PERCENT                            &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LEFT_SHIFT N1  &kp HASH                               &en_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &kp TILDE            &kp N6                  &kp NUMBER_5           &kp NUMBER_4        &kp AT_SIGN                            &en_endash  &kp F1             &kp F6                 &kp F7                &kp F12
+                                                                      &en_rdq             &en_ldq      &lt 5 NUMBER_0    &trans  &trans      &trans
             >;
         };
 
         SYM_RU {
             bindings = <
-  &kp LS(NUMBER_3)     &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &kp LS(PRCNT)                     &ru_caret   &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &ru_hash                          &ru_endash  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                            &ru_emdash  &kp F1               &kp F6                 &kp F7                &kp F12
-                                                                           &ru_rdq             &lt 5 N0       &ru_ldq    &trans  &trans      &trans
+  &kp LS(NUMBER_3)     &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &kp LS(PRCNT)                            &ru_caret   &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &ru_hash                                 &ru_endash  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                                   &ru_emdash  &kp F1               &kp F6                 &kp F7                &kp F12
+                                                                           &ru_rdq             &ru_ldq        &lt 5 NUMBER_0    &trans  &trans      &trans
             >;
 
             display-name = "Symbols_ru";
