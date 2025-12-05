@@ -951,19 +951,19 @@
 
         base_en {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U    &alt_min                                     &kp W                   &hmr LC(LSHIFT) G   &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E        &alt_dot_en                                  &kp P                   &hmr RSHIFT D       &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
-  &lt 7 Q           &alt_inch         &alt_                 &altcomma_en        &alt_slash                                   &kp B                   &kp C               &kp L                 &kp M             &kp V
-                                                            &Rep_shift LSHFT 0  &lt 7 TAB    &lt 2 SPACE    &lt 3 BACKSPACE  &Mod_something LCTRL T  &Rep_shift RSHFT 0
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                                     &kp W        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                                  &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
+  &lt 7 Q           &alt_inch         &alt_                 &altcomma_en      &alt_slash                                   &kp B        &kp C              &kp L                 &kp M             &kp V
+                                                            &mt LSHFT ESC     &lt 7 TAB    &lt 2 SPACE    &lt 3 BACKSPACE  &mt LCTRL T  &mt RSHFT ENTER
             >;
         };
 
         base_ru {
             bindings = <
-  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &kp SQT                                 &kp I                   &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Z   &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                             &kp U                   &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-  &lt 7 Q           &kp S             &kp M                 &altcomma_ru        &kp GRAVE                               &kp COMMA               &kp L             &kp K                 &kp G             &kp SEMI
-                                                            &trans              &trans       &trans    &lt 4 BACKSPACE  &Mod_something LCTRL C  &trans
+  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &kp SQT                                 &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Z   &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                             &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+  &lt 7 Q           &kp S             &kp M                 &altcomma_ru        &kp GRAVE                               &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
+                                                            &trans              &trans       &trans    &lt 4 BACKSPACE  &mt LCTRL C  &trans
             >;
 
             display-name = "ru";
@@ -971,10 +971,10 @@
 
         nav {
             bindings = <
-  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                            &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
-  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                            &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
-  &mo 8        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                       &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &kp LS(ENTER)
-                                                &trans           &trans        &trans    &lt 5 ESC  &lt 6 ENTER   &kp DEL
+  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                                  &kp PG_UP        &kp HOME         &kp UP         &kp END      &kp N0
+  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                                  &kp PG_DN        &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
+  &mo 8        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                             &kp LC(HOME)     &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &kp LS(ENTER)
+                                                &trans           &trans        &trans    &lt 5 BACKSPACE  &lt 6 BACKSPACE  &trans
             >;
 
             display-name = "Navigation";
