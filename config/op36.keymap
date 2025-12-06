@@ -579,7 +579,7 @@
         };
 
         ru_sch {
-            bindings = <&kp O>;
+            bindings = <&kp A>;
             key-positions = <17 18>;
         };
 
@@ -951,19 +951,19 @@
 
         base_en {
             bindings = <
-  &hml RIGHT_ALT J  &hml LA(LCTRL) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                                     &kp W        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
-  &hml LGUI K       &hml LALT I       &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                                  &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI H
-  &lt 7 Q           &alt_inch         &alt_                 &altcomma_en      &alt_slash                                   &kp B        &kp C              &kp L                 &kp M             &kp V
+  &hml RIGHT_ALT J  &hml LA(LCTRL) Q  &hml LC(LA(LSHFT)) U  &hml LC(LSHFT) A  &alt_min                                     &kp W        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &hmr RIGHT_ALT X
+  &hml LGUI Y       &hml LALT E       &hml LEFT_CONTROL I   &hml LSHFT O      &alt_dot_en                                  &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI L
+  &lt 7 K           &alt_inch         &alt_                 &altcomma_en      &alt_slash                                   &kp B        &kp C              &kp H                 &kp M             &kp V
                                                             &mt LSHFT ESC     &lt 7 TAB    &lt 2 SPACE    &lt 3 BACKSPACE  &mt LCTRL T  &mt RSHFT ENTER
             >;
         };
 
         base_ru {
             bindings = <
-  &hml RIGHT_ALT A  &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &kp SQT                                 &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Z   &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                             &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-  &lt 7 Q           &kp S             &kp M                 &altcomma_ru        &kp GRAVE                               &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
-                                                            &trans              &trans       &trans    &lt 4 BACKSPACE  &mt LCTRL C  &trans
+  &kp GRAVE        &hml LA(LCTRL) SQT  &hml LS(LA(LCTRL)) E  &hml LC(LSHFT) F  &alt_min                                &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Z  &hml LALT T         &hml LCTRL B          &hml LSHFT J      &alt_dot_ru                             &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+  &lt 7 Q          &kp DOT             &kp S                 &altcomma_ru      &kp M                                   &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
+                                                             &trans            &trans       &trans    &lt 4 BACKSPACE  &mt LCTRL C  &trans
             >;
 
             display-name = "ru";
