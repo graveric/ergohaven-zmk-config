@@ -961,8 +961,8 @@
 
         nav {
             bindings = <
-  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                                  &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp N0
-  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                                  &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp LC(END)
+  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                                  &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp PRINTSCREEN
+  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                                  &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp C_MENU
   &mo 8        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                             &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &kp LS(ENTER)
                                                 &trans           &trans        &trans    &lt 5 BACKSPACE  &lt 6 DELETE  &trans
             >;
@@ -982,8 +982,8 @@
         SYM_RU {
             bindings = <
   &kp LS(NUMBER_3)     &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &kp LS(PRCNT)                            &ru_caret   &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &ru_hash                                 &ru_endash  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                                   &ru_emdash  &kp F1               &kp F6                 &kp F7                &kp F12
+  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &ru_hash                                 &ru_emdash  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                                   &ru_endash  &kp F1               &kp F6                 &kp F7                &kp F12
                                                                            &ru_rdq             &ru_ldq        &lt 5 NUMBER_0    &trans  &trans      &trans
             >;
 
