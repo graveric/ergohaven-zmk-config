@@ -967,7 +967,7 @@
                                                 &trans           &trans        &trans    &lt 5 BACKSPACE  &lt 6 DELETE  &trans
             >;
 
-            display-name = "Navigation";
+            display-name = "Nav";
         };
 
         sym {
