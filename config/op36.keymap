@@ -934,6 +934,22 @@
 
             label = "RU_BACKSLASH";
         };
+
+        new_line_down: new_line_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&macro_wait_time 0>, <&kp LS(ENTER)>;
+
+            label = "NEW_LINE_DOWN";
+        };
+
+        new_line_up: new_line_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&macro_wait_time 0>, <&kp LS(ENTER)>;
+
+            label = "NEW_LINE_UP";
+        };
     };
 
     keymap {
@@ -961,10 +977,10 @@
 
         nav {
             bindings = <
-  &kp LS(DEL)  &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                                  &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp PRINTSCREEN
-  &kp LC(A)    &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                                  &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &kp C_MENU
-  &mo 8        &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                             &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &kp LS(ENTER)
-                                                &trans           &trans        &trans    &lt 5 BACKSPACE  &lt 6 DELETE  &trans
+  &kp LS(DEL)   &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL                                  &kp PG_UP     &kp HOME         &kp UP         &kp END      &kp PRINTSCREEN
+  &new_line_up  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS                                  &kp PG_DN     &kp LEFT         &kp DOWN       &kp RIGHT    &new_line_down
+  &mo 8         &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)                             &kp LC(HOME)  &kt LC(PAGE_UP)  &kp LC(PG_DN)  &kp LC(END)  &kp LS(ENTER)
+                                                 &trans           &trans        &trans    &lt 5 BACKSPACE  &lt 6 DELETE  &trans
             >;
 
             display-name = "Nav";
