@@ -409,18 +409,18 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BKSP_EN";
             #binding-cells = <0>;
-            bindings = <&lt 3 BACKSPACE>, <&mt BACKSPACE BACKSPACE>;
+            bindings = <&lt 3 BACKSPACE>, <&kp BACKSPACE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
 
         bkspace_ru: bkspace_ru {
             compatible = "zmk,behavior-tap-dance";
             label = "BKSPACE_RU";
             #binding-cells = <0>;
-            bindings = <&lt 4 BACKSPACE>, <&mt BACKSPACE BACKSPACE>;
+            bindings = <&lt 4 BACKSPACE>, <&kp BACKSPACE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
     };
 
