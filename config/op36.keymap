@@ -405,61 +405,15 @@
             label = "OLD_HMR";
         };
 
-        bksp_en: bksp_en {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BKSP_EN";
-            #binding-cells = <0>;
-            bindings =
-                <&lt_bk_nav 3 BACKSPACE>,
-                <&lt_bk_bk BACKSPACE BACKSPACE>,
-                <&lt_bk_bk BACKSPACE BACKSPACE>,
-                <&lt_bk_bk BACKSPACE BACKSPACE>;
-
-            tapping-term-ms = <200>;
-        };
-
-        bkspace_ru: bkspace_ru {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BKSPACE_RU";
-            #binding-cells = <0>;
-            bindings =
-                <&lt_bk_nav 4 BACKSPACE>,
-                <&lt_bk_bk BACKSPACE BACKSPACE>,
-                <&lt_bk_bk BACKSPACE BACKSPACE>,
-                <&lt_bk_bk BACKSPACE BACKSPACE>;
-
-            tapping-term-ms = <200>;
-        };
-
-        lt_bk_nav: lt_bk_nav {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_BK_NAV";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "balanced";
-        };
-
-        lt_bk_bk: lt_bk_bk {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_BK_BK";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         bk_lt: bk_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "BK_LT";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
         };
     };
 
@@ -1023,10 +977,10 @@
 
         base_ru {
             bindings = <
-  &kp A            &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &alt_min                            &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Z  &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                         &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-  &lt 7 Q          &kp S             &kp M                 &altcomma_ru        &kp GRAVE                           &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
-                                                           &trans              &trans       &trans    &bkspace_ru  &mt LCTRL C  &trans
+  &kp A            &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &alt_min                                   &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Z  &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                                &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+  &lt 7 Q          &kp S             &kp M                 &altcomma_ru        &kp GRAVE                                  &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
+                                                           &trans              &trans       &trans    &bk_lt 4 BACKSPACE  &mt LCTRL C  &trans
             >;
 
             display-name = "ru";
