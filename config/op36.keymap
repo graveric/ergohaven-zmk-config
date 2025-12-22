@@ -409,7 +409,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BKSP_EN";
             #binding-cells = <0>;
-            bindings = <&lt 3 BACKSPACE>, <&kp BACKSPACE>;
+            bindings =
+                <&lt_bk_nav 3 BACKSPACE>,
+                <&lt_bk_bk BACKSPACE BACKSPACE>;
 
             tapping-term-ms = <200>;
         };
@@ -418,9 +420,32 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BKSPACE_RU";
             #binding-cells = <0>;
-            bindings = <&lt 4 BACKSPACE>, <&kp BACKSPACE>;
+            bindings =
+                <&lt_bk_nav 4 BACKSPACE>,
+                <&lt_bk_bk BACKSPACE BACKSPACE>;
 
             tapping-term-ms = <200>;
+        };
+
+        lt_bk_nav: lt_bk_nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BK_NAV";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+        };
+
+        lt_bk_bk: lt_bk_bk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BK_BK";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
