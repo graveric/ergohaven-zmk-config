@@ -451,6 +451,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        bk_lt: bk_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BK_LT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+        };
     };
 
     combos {
@@ -1004,10 +1014,10 @@
 
         base_en {
             bindings = <
-  &kp J        &hml LC(LEFT_ALT) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                              &kp Q        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &kp K
-  &hml LGUI H  &hml LALT I          &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                           &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI M
-  &lt 7 X      &alt_inch            &alt_                 &altcomma_en      &alt_slash                            &kp B        &kp C              &kp L                 &kp W             &kp V
-                                                          &mt LSHFT ESC     &lt 7 TAB    &lt 2 SPACE    &bksp_en  &mt LCTRL T  &mt RSHFT ENTER
+  &kp J        &hml LC(LEFT_ALT) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                                        &kp Q        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &kp K
+  &hml LGUI H  &hml LALT I          &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                                     &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI M
+  &lt 7 X      &alt_inch            &alt_                 &altcomma_en      &alt_slash                                      &kp B        &kp C              &kp L                 &kp W             &kp V
+                                                          &mt LSHFT ESC     &lt 7 TAB    &lt 2 SPACE    &bk_lt 3 BACKSPACE  &mt LCTRL T  &mt RSHFT ENTER
             >;
         };
 
