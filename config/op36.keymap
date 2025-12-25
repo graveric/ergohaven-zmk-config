@@ -961,6 +961,32 @@
 
             label = "NEW_LINE_UP";
         };
+
+        cut_string: cut_string {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp HOME>,
+                <&macro_wait_time 0>,
+                <&kp LS(DOWN)>,
+                <&macro_wait_time 0>,
+                <&kp LC(X)>;
+
+            label = "CUT_STRING";
+        };
+
+        copy_string: copy_string {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp HOME>,
+                <&macro_wait_time 0>,
+                <&kp LS(DOWN)>,
+                <&macro_wait_time 0>,
+                <&kp LC(C)>;
+
+            label = "COPY_STRING";
+        };
     };
 
     keymap {
