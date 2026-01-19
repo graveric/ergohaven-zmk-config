@@ -1466,8 +1466,8 @@
             bindings = <
   &kp LS(DELETE)  &kp LS(HOME)  &kp LS(UP)    &kp LS(END)     &kp LS(LC(HOME))                             &kp LC(HOME)        &kp HOME       &kp UP      &kp END    &kp PAGE_UP
   &kp LS(LC(K))   &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)   &kp LC(LS(END))                              &kp LC(LEFT_ARROW)  &kp LEFT       &kp DOWN    &kp RIGHT  &kp PAGE_DOWN
-  &mo 8           &copy_string  &cut_string   &new_line_down  &new_line_up                                 &kp ENTER           &kt BACKSPACE  &kp DELETE  &kp INS    &kp PRINTSCREEN
-                                              &trans          &trans            &trans    &lt 5 BACKSPACE  &lt 6 DELETE        &trans
+  &mo 8           &copy_string  &cut_string   &new_line_down  &new_line_up                                 &kp ENTER           &kp BACKSPACE  &kp DELETE  &kp INS    &kp PRINTSCREEN
+                                              &trans          &trans            &trans    &lt 5 BACKSPACE  &lt 6 DELETE        &kp LCTRL
             >;
 
             display-name = "Nav";
