@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: ergohaven
       url-base: https://github.com/ergohaven
+    - name: urob
+      url-base: https://github.com/urob      
   projects:
     - name: ergohaven-zmk
       remote: ergohaven
       revision: main
       import: config/west.yml
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: main   
   self:
     path: config
