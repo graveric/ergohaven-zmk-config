@@ -1437,6 +1437,13 @@
 
             label = "COMMA_SPACE_RU";
         };
+
+        ing: ing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp G>;
+            label = "ING";
+        };
     };
 
     keymap {
