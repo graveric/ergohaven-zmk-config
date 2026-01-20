@@ -52,7 +52,7 @@
             akt_mnmn { trigger-keys = <MINUS>; max-prior-idle-ms = <1000>; bindings = <&kp MINUS>; };
             akt_lprn { trigger-keys = <LPAR>; max-prior-idle-ms = <1000>; bindings = <&kp LPAR>; };
             akt_qu { trigger-keys = <Q>; max-prior-idle-ms = <1000>; bindings = <&kp U>; };
-            akt_lbrb { trigger-keys = <LBKT>; max-prior-idle-ms = <1000>; bindings = <&kp LBRB>; };
+            akt_lbrb { trigger-keys = <LBKT>; max-prior-idle-ms = <1000>; bindings = <&kp RBKT>; };
             akt_tr { trigger-keys = <T>; max-prior-idle-ms = <1000>; bindings = <&kp R>; };
             akt_gh { trigger-keys = <G>; max-prior-idle-ms = <1000>; bindings = <&kp H>; };
             akt_nl { trigger-keys = <N>; max-prior-idle-ms = <1000>; bindings = <&kp L>; };
