@@ -170,7 +170,7 @@
             akt_yf { trigger-keys = <Q>; max-prior-idle-ms = <1000>; bindings = <&kp A>; };
             akt_khkh { trigger-keys = <LBKT>; max-prior-idle-ms = <1000>; bindings = <&kp LBKT>; };
             akt_edot { trigger-keys = <T>; max-prior-idle-ms = <1000>; bindings = <&kp SLASH>; };
-            akt_pp trigger-keys = <G>; max-prior-idle-ms = <1000>; bindings = <&kp G>; };
+            akt_pp { trigger-keys = <G>; max-prior-idle-ms = <1000>; bindings = <&kp G>; };
             akt_tt { trigger-keys = <N>; max-prior-idle-ms = <1000>; bindings = <&kp N>; };
             akt_ao { trigger-keys = <F>; max-prior-idle-ms = <1000>; bindings = <&kp J>; };
             akt_ll { trigger-keys = <K>; max-prior-idle-ms = <1000>; bindings = <&kp K>; };
