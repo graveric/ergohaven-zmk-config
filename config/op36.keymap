@@ -811,26 +811,6 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
-
-        lt_arc_en: lt_arc_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_ARC_EN";
-            bindings = <&lt>, <&arc_en>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-        };
-
-        lt_arc_ru: lt_arc_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_ARC_RU";
-            bindings = <&lt>, <&arc_ru>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-        };
     };
 
     combos {
@@ -1451,19 +1431,19 @@
 
         base_en {
             bindings = <
-  &kp J        &hml LC(LEFT_ALT) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                                    &kp Q        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &kp K
-  &hml LGUI H  &hml LALT I          &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                                 &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI M
-  &lt 7 X      &alt_inch            &alt_                 &altcomma_en      &alt_slash                                  &kp B        &kp C              &kp L                 &kp W             &kp V
-                                                          &mt LSHFT ESC     &lt 7 TAB    &lt 2 SPACE    &lt_arc_en 3 0  &mt LSHFT T  &mt LCTRL ENTER
+  &kp J        &hml LC(LEFT_ALT) Y  &hml LC(LA(LSHFT)) A  &hml LC(LSHFT) U  &alt_min                           &kp Q        &hmr LC(LSHIFT) G  &hmr LA(LC(LSHFT)) N  &hmr LA(LCTRL) F  &kp K
+  &hml LGUI H  &hml LALT I          &hml LEFT_CONTROL O   &hml LSHFT E      &alt_dot_en                        &kp P        &hmr RSHIFT D      &hmr RCTRL R          &hmr LALT S       &hmr RGUI M
+  &lt 7 X      &alt_inch            &alt_                 &altcomma_en      &alt_slash                         &kp B        &kp C              &kp L                 &kp W             &kp V
+                                                          &mt LSHFT ESC     &lt 7 TAB    &lt 2 SPACE    &none  &mt LSHFT T  &mt LCTRL ENTER
             >;
         };
 
         base_ru {
             bindings = <
-  &kp A            &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &alt_min                               &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
-  &hml LEFT_GUI Z  &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                            &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-  &lt 7 Q          &kp S             &kp M                 &altcomma_ru        &kp GRAVE                              &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
-                                                           &trans              &trans       &trans    &lt_arc_ru 4 0  &mt LCTRL C  &trans
+  &kp A            &hml LA(LCTRL) E  &hml LS(LA(LCTRL)) F  &hml LC(LSHFT) DOT  &alt_min                      &kp I        &hmr LC(RSHFT) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &hmr RIGHT_ALT P
+  &hml LEFT_GUI Z  &hml LALT B       &hml LCTRL J          &hml LSHFT T        &alt_dot_ru                   &kp U        &hmr RSHFT N      &hmr RCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+  &lt 7 Q          &kp S             &kp M                 &altcomma_ru        &kp GRAVE                     &kp COMMA    &kp L             &kp K                 &kp G             &kp SEMI
+                                                           &trans              &trans       &trans    &none  &mt LCTRL C  &trans
             >;
 
             display-name = "ru";
