@@ -1876,19 +1876,19 @@
 
         base_en {
             bindings = <
-  &kp J    &kp Y        &kp A                &kp U         &alt_min                                         &kp Q                     &kp G          &kp N         &kp F        &kp K
-  &kp H    &hml LALT I  &hml LEFT_CONTROL O  &hml LSHFT E  &alt_dot_en                                      &kp P                     &hmr RSHIFT D  &hmr RCTRL R  &hmr LALT S  &kp M
-  &lt 7 X  &alt_        &alt_inch            &altcomma_en  &alt_slash                                       &kp B                     &kp C          &kp L         &kp W        &kp V
-                                             &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &mt LCTRL ESC
+  &kp J  &kp Y        &kp A                &kp U         &alt_min                                         &kp Q                     &kp G          &kp N         &kp F        &kp K
+  &kp H  &hml LALT I  &hml LEFT_CONTROL O  &hml LSHFT E  &alt_dot_en                                      &kp P                     &hmr RSHIFT D  &hmr RCTRL R  &hmr LALT S  &kp M
+  &kp X  &alt_        &alt_inch            &altcomma_en  &alt_slash                                       &kp B                     &kp C          &kp L         &kp W        &kp V
+                                           &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &mt LCTRL ESC
             >;
         };
 
         base_ru {
             bindings = <
-  &kp A    &kp E        &kp F         &kp DOT       &alt_min                                    &kp I                     &kp V         &kp Y         &kp R        &kp P
-  &kp Z    &hml LALT B  &hml LCTRL J  &hml LSHFT T  &alt_dot_ru                                 &kp U                     &hmr RSHFT N  &hmr RCTRL H  &hmr LALT D  &kp X
-  &lt 7 Q  &kp S        &kp M         &altcomma_ru  &kp GRAVE                                   &kp COMMA                 &kp L         &kp K         &kp G        &kp SEMI
-                                      &trans        &arcane_left_ru LSHFT 0  &trans    &lt 4 C  &arcane_right_ru LCTRL 0  &trans
+  &kp A  &kp E        &kp F         &kp DOT       &alt_min                                    &kp I                     &kp V         &kp Y         &kp R        &kp P
+  &kp Z  &hml LALT B  &hml LCTRL J  &hml LSHFT T  &alt_dot_ru                                 &kp U                     &hmr RSHFT N  &hmr RCTRL H  &hmr LALT D  &kp X
+  &kp Q  &kp S        &kp M         &altcomma_ru  &kp GRAVE                                   &kp COMMA                 &kp L         &kp K         &kp G        &kp SEMI
+                                    &trans        &arcane_left_ru LSHFT 0  &trans    &lt 4 C  &arcane_right_ru LCTRL 0  &trans
             >;
 
             display-name = "ru";
