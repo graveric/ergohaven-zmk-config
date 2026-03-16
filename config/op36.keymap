@@ -1396,11 +1396,13 @@
         c_z {
             bindings = <&kp LC(Z)>;
             key-positions = <23 22>;
+            layers = <0 1>;
         };
 
         cs_z {
             bindings = <&kp LS(LC(Z))>;
             key-positions = <22 21>;
+            layers = <0 1>;
         };
 
         rth_alt {
@@ -1447,6 +1449,18 @@
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <27 28>;
             layers = <2 5>;
+        };
+
+        navi_line_up {
+            bindings = <&new_line_up>;
+            key-positions = <23 22>;
+            layers = <2>;
+        };
+
+        navi_copy_string {
+            bindings = <&copy_string>;
+            key-positions = <21 22>;
+            layers = <2>;
         };
     };
 
@@ -1896,10 +1910,10 @@
 
         nav {
             bindings = <
-  &kp LS(DELETE)  &kp LS(HOME)  &kp LS(UP)    &kp LS(END)     &kp LS(LC(HOME))                   &kp LC(HOME)        &kp HOME       &kp UP      &kp END    &kp PAGE_UP
-  &kp LS(LC(K))   &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)   &kp LC(LS(END))                    &kp LC(LEFT_ARROW)  &kp LEFT       &kp DOWN    &kp RIGHT  &kp PAGE_DOWN
-  &mo 8           &copy_string  &cut_string   &new_line_down  &new_line_up                       &kp ENTER           &kp BACKSPACE  &kp DELETE  &kp INS    &kp PRINTSCREEN
-                                              &trans          &trans            &trans    &mo 5  &layer_sft 6 LSHFT  &kp LCTRL
+  &kp LS(DELETE)  &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LS(LC(HOME))                   &kp LC(HOME)        &kp HOME       &kp UP      &kp END    &kp PAGE_UP
+  &kp LS(LC(K))   &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LC(LS(END))                    &kp LC(LEFT_ARROW)  &kp LEFT       &kp DOWN    &kp RIGHT  &kp PAGE_DOWN
+  &mo 8           &cut_string   &new_line_down  &kp ESC        &kp DELETE                         &kp ENTER           &kp BACKSPACE  &kp DELETE  &kp INS    &kp PRINTSCREEN
+                                                &trans         &trans            &trans    &mo 5  &layer_sft 6 LSHFT  &kp LCTRL
             >;
 
             display-name = "Nav";
