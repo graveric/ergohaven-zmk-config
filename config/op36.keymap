@@ -1915,7 +1915,7 @@
   &kp A  &kp E  &kp F  &kp DOT       &alt_min                                    &kp I                     &kp V   &kp Y  &kp R  &kp P
   &kp Z  &kp B  &kp J  &kp T         &alt_dot_ru                                 &kp U                     &kp N   &kp H  &kp D  &kp X
   &kp Q  &kp S  &kp M  &altcomma_ru  &kp GRAVE                                   &kp COMMA                 &kp L   &kp K  &kp G  &kp SEMI
-                       &trans        &arcane_left_ru LSHFT 0  &trans    &lt 4 C  &arcane_right_ru LCTRL 0  &trans
+                       &trans        &arcane_left_ru LSHFT 0  &trans    &lt 4 C  &arcane_right_ru LSHFT 0  &trans
             >;
 
             display-name = "ru";
