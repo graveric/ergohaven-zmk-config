@@ -1099,7 +1099,7 @@
         alt_slash_ru: alt_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH_RU";
-            bindings = <&ctrl_slash_ru>, <&kp RA(NUMBER_4)>;
+            bindings = <&ctrl_slash_ru>, <&kp AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
