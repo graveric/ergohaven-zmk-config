@@ -928,7 +928,7 @@
         alt_min: alt_min {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_MIN";
-            bindings = <&ctrl_min>, <&kp RA(CARET)>;
+            bindings = <&ctrl_min>, <&kp RA(NUMBER_6)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1099,7 +1099,7 @@
         alt_slash_ru: alt_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH_RU";
-            bindings = <&ctrl_slash_ru>, <&kp RA(DOLLAR)>;
+            bindings = <&ctrl_slash_ru>, <&kp RA(NUMBER_4)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1943,10 +1943,10 @@
 
         SYM_RU {
             bindings = <
-  &kp LS(NUMBER_3)       &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &alt_min                                  &kp PLUS       &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &kp HASH                                  &kp RA(MINUS)  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &kp RA(LS(GRAVE))      &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &kp RA(DOLLAR)                            &kp RA(SEMI)   &kp F1               &kp F6                 &kp F7                &kp F12
-                                                                             &kp RA(DOT)         &kp RA(COMMA)   &lt 5 NUMBER_0    &trans  &trans         &trans
+  &kp LS(NUMBER_3)       &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &alt_min                                    &kp PLUS       &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &kp EXCL                                    &kp RA(MINUS)  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &kp RA(LS(GRAVE))      &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &kp RA(NUMBER_4)                            &kp RA(SEMI)   &kp F1               &kp F6                 &kp F7                &kp F12
+                                                                             &kp RA(DOT)         &kp RA(COMMA)     &lt 5 NUMBER_0    &trans  &trans         &trans
             >;
 
             display-name = "Symbols_ru";
