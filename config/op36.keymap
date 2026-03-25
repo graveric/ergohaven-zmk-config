@@ -1475,6 +1475,21 @@
             key-positions = <21 22>;
             layers = <2>;
         };
+
+        ralt_left {
+            bindings = <&kp RALT>;
+            key-positions = <24 14>;
+        };
+
+        ralt_right {
+            bindings = <&kp RALT>;
+            key-positions = <25 15>;
+        };
+
+        not_equal {
+            bindings = <&not_equal>;
+            key-positions = <5 15>;
+        };
     };
 
     macros {
