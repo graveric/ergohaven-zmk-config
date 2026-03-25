@@ -928,7 +928,7 @@
         alt_min: alt_min {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_MIN";
-            bindings = <&ctrl_min>, <&kp PLUS>;
+            bindings = <&ctrl_min>, <&kp RA(CARET)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -937,7 +937,7 @@
         alt_slash: alt_slash {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH";
-            bindings = <&ctrl_slash>, <&kp DOLLAR>;
+            bindings = <&ctrl_slash>, <&kp AT_SIGN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -955,7 +955,7 @@
         alt_dot_en: alt_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_DOT_EN";
-            bindings = <&ctrl_dot_en>, <&kp COLON>;
+            bindings = <&ctrl_dot_en>, <&kp HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -973,7 +973,7 @@
         alt_dot_ru: alt_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_DOT_RU";
-            bindings = <&ctrl_dot_ru>, <&kp CARET>;
+            bindings = <&ctrl_dot_ru>, <&kp HASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1000,7 +1000,7 @@
         ctrl_dot_en: ctrl_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_EN";
-            bindings = <&up_dot>, <&kp EXCL>;
+            bindings = <&up_dot>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -1072,7 +1072,7 @@
         ctrl_dot_ru: ctrl_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_RU";
-            bindings = <&up_dot_ru>, <&kp EXCL>;
+            bindings = <&up_dot_ru>, <&kp CARET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -1099,7 +1099,7 @@
         alt_slash_ru: alt_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH_RU";
-            bindings = <&ctrl_slash_ru>, <&ru_dollar>;
+            bindings = <&ctrl_slash_ru>, <&kp RA(DOLLAR)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1934,19 +1934,19 @@
 
         sym {
             bindings = <
-  &en_number           &hml LC(LEFT_ALT) N9    &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7   &kp PERCENT                            &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LEFT_SHIFT N1  &kp HASH                               &en_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &kp TILDE            &kp N6                  &kp NUMBER_5           &kp NUMBER_4        &kp AT_SIGN                            &en_endash  &kp F1             &kp F6                 &kp F7                &kp F12
-                                                                      &en_rdq             &en_ldq      &lt 5 NUMBER_0    &trans  &trans      &trans
+  &en_number           &hml LC(LEFT_ALT) N9    &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7   &alt_min                                 &kp PLUS       &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI PRCNT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LEFT_SHIFT N1  &kp EXCL                                 &kp RA(MINUS)  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &kp TILDE            &kp N6                  &kp NUMBER_5           &kp NUMBER_4        &kp DOLLAR                               &kp RA(SEMI)   &kp F1             &kp F6                 &kp F7                &kp F12
+                                                                      &kp RA(DOT)         &kp RA(COMMA)  &lt 5 NUMBER_0    &trans  &trans         &trans
             >;
         };
 
         SYM_RU {
             bindings = <
-  &kp LS(NUMBER_3)     &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &kp LS(PRCNT)                            &ru_caret   &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &ru_hash                                 &ru_emdash  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &ru_tilda            &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &ru_at                                   &ru_endash  &kp F1               &kp F6                 &kp F7                &kp F12
-                                                                           &ru_rdq             &ru_ldq        &lt 5 NUMBER_0    &trans  &trans      &trans
+  &kp LS(NUMBER_3)       &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &alt_min                                  &kp PLUS       &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
+  &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &kp HASH                                  &kp RA(MINUS)  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
+  &kp RA(LS(GRAVE))      &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &kp RA(DOLLAR)                            &kp RA(SEMI)   &kp F1               &kp F6                 &kp F7                &kp F12
+                                                                             &kp RA(DOT)         &kp RA(COMMA)   &lt 5 NUMBER_0    &trans  &trans         &trans
             >;
 
             display-name = "Symbols_ru";
