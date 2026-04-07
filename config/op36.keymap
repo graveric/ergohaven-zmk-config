@@ -1269,6 +1269,19 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
         };
+
+        layer_dashspaced: layer_dashspaced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_DASHSPACED";
+            bindings = <&mo>, <&emdash_spaced>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -1449,19 +1462,19 @@
         ShiftEnter {
             bindings = <&kp LS(ENTER)>;
             key-positions = <26 27>;
-            layers = <2 5>;
+            layers = <2 5 9>;
         };
 
         CtrlEnter {
             bindings = <&kp LC(ENTER)>;
             key-positions = <26 27 28>;
-            layers = <2 5>;
+            layers = <2 5 9>;
         };
 
         CtrlBksp {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <27 28>;
-            layers = <2 5>;
+            layers = <2 5 9>;
         };
 
         navi_line_up {
@@ -1918,6 +1931,13 @@
             bindings = <&kp EXCL &kp EQUAL>;
             label = "NOT_EQUAL";
         };
+
+        emdash_spaced: emdash_spaced {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp RA(MINUS) &kp SPACE>;
+            label = "EMDASH_SPACED";
+        };
     };
 
     keymap {
@@ -1945,10 +1965,10 @@
 
         nav {
             bindings = <
-  &kp LS(DELETE)  &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LS(LC(HOME))                   &kp LC(HOME)        &kp HOME       &kp UP      &kp END    &kp PAGE_UP
-  &kp LS(LC(K))   &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LC(LS(END))                    &kp LC(LEFT_ARROW)  &kp LEFT       &kp DOWN    &kp RIGHT  &kp PAGE_DOWN
-  &mo 8           &cut_string   &new_line_down  &kp ESC        &kp DELETE                         &kp ENTER           &kp BACKSPACE  &kp DELETE  &kp INS    &kp PRINTSCREEN
-                                                &trans         &trans            &trans    &mo 5  &layer_sft 6 LSHFT  &kp LCTRL
+  &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LS(LC(HOME))                   &kp LC(HOME)        &kp HOME       &kp UP      &kp END    &kp PAGE_UP
+  &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LC(LS(END))                    &kp LC(LEFT_ARROW)  &kp LEFT       &kp DOWN    &kp RIGHT  &kp PAGE_DOWN
+  &mo 8            &cut_string   &new_line_down  &kp ESC        &kp DELETE                         &kp ENTER           &kp BACKSPACE  &kp DELETE  &kp INS    &kp PRINTSCREEN
+                                                 &trans         &trans            &trans    &mo 9  &layer_sft 6 LSHFT  &kp LCTRL
             >;
 
             display-name = "Nav";
@@ -1956,19 +1976,19 @@
 
         sym {
             bindings = <
-  &en_number           &hml LC(LEFT_ALT) N9    &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7   &alt_min                                 &kp PLUS       &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI PRCNT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LEFT_SHIFT N1  &kp EXCL                                 &kp RA(MINUS)  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &kp TILDE            &kp N6                  &kp NUMBER_5           &kp NUMBER_4        &kp DOLLAR                               &kp RA(SEMI)   &kp F1             &kp F6                 &kp F7                &kp F12
-                                                                      &kp RA(DOT)         &kp RA(COMMA)  &lt 5 NUMBER_0    &trans  &trans         &trans
+  &kp F10            &kp F9            &kp F4         &kp F3              &alt_min                                        &kp PLUS      &kp N7         &kp N8               &kp N9                  &kp RA(NUMBER_3)
+  &hml LEFT_GUI F11  &hml LEFT_ALT F8  &hml LCTRL F5  &hml LEFT_SHIFT F2  &kp EXCL                                        &kp N0        &hmr LSHFT N1  &hmr LCTRL NUMBER_2  &hmr LEFT_ALT NUMBER_3  &hmr LEFT_GUI PERCENT
+  &kp F12            &kp F7            &kp F6         &kp F1              &kp DOLLAR                                      &kp RA(SEMI)  &kp NUMBER_4   &kp NUMBER_5         &kp N6                  &kp TILDE
+                                                      &kp RA(DOT)         &kp RA(COMMA)  &layer_dashspaced 9 0    &trans  &trans        &trans
             >;
         };
 
         SYM_RU {
             bindings = <
-  &kp LS(NUMBER_3)       &hml LC(LEFT_ALT) N9    &hml LA(LC(LEFT_SHIFT)) N8  &hml LS(LCTRL) N7   &alt_min                                    &kp PLUS       &hmr LS(LCTRL) F3    &hmr LS(LA(LCTRL)) F4  &hmr LC(LEFT_ALT) F9  &kp F10
-  &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2         &hml LEFT_SHIFT N1  &kp EXCL                                    &kp RA(MINUS)  &hmr RIGHT_SHIFT F2  &hmr LCTRL F5          &hmr LEFT_ALT F8      &hmr LEFT_GUI F11
-  &kp RA(LS(GRAVE))      &kp N6                  &kp NUMBER_5                &kp NUMBER_4        &kp RA(NUMBER_4)                            &kp RA(SEMI)   &kp F1               &kp F6                 &kp F7                &kp F12
-                                                                             &kp RA(DOT)         &kp RA(COMMA)     &lt 5 NUMBER_0    &trans  &trans         &trans
+  &kp F10            &kp F9            &kp F4         &kp F3              &alt_min                                           &kp PLUS      &kp N7               &kp N8               &kp N9                  &kp RA(NUMBER_3)
+  &hml LEFT_GUI F11  &hml LEFT_ALT F8  &hml LCTRL F5  &hml LEFT_SHIFT F2  &kp EXCL                                           &kp N0        &hmr RIGHT_SHIFT N1  &hmr LCTRL NUMBER_2  &hmr LEFT_ALT NUMBER_3  &hmr LEFT_GUI PERCENT
+  &kp F12            &kp F7            &kp F6         &kp F1              &kp RA(NUMBER_4)                                   &kp RA(SEMI)  &kp NUMBER_4         &kp NUMBER_5         &kp N6                  &kp LS(RA(GRAVE))
+                                                      &kp RA(DOT)         &kp RA(COMMA)     &layer_dashspaced 9 0    &trans  &trans        &trans
             >;
 
             display-name = "Symbols_ru";
@@ -1976,10 +1996,10 @@
 
         adj {
             bindings = <
-  &bootloader     &out OUT_BLE  &out OUT_USB  &none   &none                     &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
-  &bt BT_CLR_ALL  &none         &none         &none   &none                     &trans        &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-  &trans          &none         &none         &none   &none                     &kp ENTER     &kp BACKSPACE        &kp DELETE         &kp INSERT          &kp PRINTSCREEN
-                                              &trans  &trans  &trans    &trans  &trans        &trans
+  &bootloader  &out OUT_BLE  &out OUT_USB  &bt BT_CLR  &bt BT_CLR_ALL                    &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
+  &trans       &none         &none         &none       &none                             &trans        &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
+  &trans       &none         &none         &none       &none                             &kp ENTER     &kp BACKSPACE        &kp DELETE         &kp INSERT          &kp PRINTSCREEN
+                                           &trans      &trans          &trans    &trans  &trans        &trans
             >;
 
             display-name = "Adjust";
@@ -2009,6 +2029,15 @@
   &sk LEFT_GUI  &sk LEFT_ALT      &sk LCTRL                 &sk LSHFT      &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
   &mo 8         &trans            &trans                    &trans         &trans                    &trans          &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &trans
                                                             &trans         &trans  &trans    &trans  &trans          &trans
+            >;
+        };
+
+        unicode {
+            bindings = <
+  &kp LEFT_ALT  &kp RA(E)  &kp RA(F)  &kp RA(X)       &kp RA(I)                         &kp RA(D)  &kp RA(A)       &kp RA(Y)          &kp RA(R)      &kp RA(V)
+  &kp RA(H)     &kp RA(B)  &kp RA(J)  &kp LEFT_SHIFT  &kp RA(LS(N6))                    &kp RA(U)  &kp LEFT_SHIFT  &kp RA(LS(MINUS))  &kp RA(C)      &kp RA(NUMBER_5)
+  &kp LCTRL     &kp RA(S)  &kp RA(O)  &kp RA(Z)       &kp RA(MINUS)                     &kp ENTER  &kp BSPC        &kp DEL            &kp RA(SLASH)  &kp LS(RA(NUMBER_3))
+                                      &trans          &trans          &trans    &trans  &trans     &trans
             >;
         };
     };
