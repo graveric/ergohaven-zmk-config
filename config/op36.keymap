@@ -1003,13 +1003,13 @@
         };
 
         undr {
-            bindings = <&alt_ru_>;
+            bindings = <&gr_under>;
             key-positions = <13 14>;
             layers = <1>;
         };
 
         rusinch {
-            bindings = <&alt_ru_inch>;
+            bindings = <&gr_quote>;
             key-positions = <7 8>;
             layers = <1>;
         };
@@ -1055,7 +1055,7 @@
         };
 
         ru_sl {
-            bindings = <&alt_slash_ru>;
+            bindings = <&gr_slash>;
             key-positions = <23 24>;
         };
 
