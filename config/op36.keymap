@@ -1185,7 +1185,7 @@
         };
 
         not_equal {
-            bindings = <&not_equal>;
+            bindings = <&not_equal_macro>;
             key-positions = <5 15>;
         };
         
