@@ -845,7 +845,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         arcane_left_ru: arcane_left_ru {
@@ -855,7 +855,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         arcane_right_en: arcane_right_en {
@@ -865,7 +865,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         arcane_right_ru: arcane_right_ru {
@@ -875,7 +875,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         layer_sft: layer_sft {
@@ -1016,12 +1016,12 @@
 
         th_alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <31 32>;
+            key-positions = <31 30>;
         };
 
         th_ctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
         };
 
         en_lbr {
@@ -1100,13 +1100,13 @@
             layers = <0 1>;
         };
 
-        rth_alt {
-            bindings = <&kp LEFT_ALT>;
+        rth_ctrl {
+            bindings = <&kp LCTRL>;
             key-positions = <33 34>;
         };
 
-        rth_gui {
-            bindings = <&kp LGUI>;
+        rth_alt {
+            bindings = <&kp LALT>;
             key-positions = <35 34>;
         };
 
@@ -1197,6 +1197,11 @@
             bindings = <&kp RA(RIGHT_BRACKET)>;
             key-positions = <5 6>;
             layers = <1>;
+        };
+
+        guui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <30 35>;
         };
     };
 
@@ -1635,29 +1640,29 @@
         en_base {
             label = "BASE";
             bindings = <
-  &kp J  &kp Y      &kp A         &kp U         &gr_minus                                        &kp Q                     &kp G         &kp N         &kp F  &kp K
-  &kp H  &kp I      &hml LCTRL O  &hml LSHFT E  &gr_dot_en                                       &kp P                     &hmr RSHFT D  &hmr LCTRL R  &kp S  &kp M
-  &kp X  &gr_under  &gr_quote     &gr_comma_en  &gr_slash                                        &kp B                     &kp C         &kp L         &kp W  &kp V
-                                  &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 7 ESC
+  &kp J  &kp Y      &kp A      &kp U         &gr_minus                                        &kp Q                     &kp G      &kp N  &kp F  &kp K
+  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                                       &kp P                     &kp D      &kp R  &kp S  &kp M
+  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                                        &kp B                     &kp C      &kp L  &kp W  &kp V
+                               &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 7 ESC
             >;
         };
 
         ru {
             bindings = <
-  &kp A  &kp E  &kp F         &kp DOT       &gr_minus                                   &kp I                     &kp V         &kp Y         &kp R  &kp P
-  &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T  &gr_dot_ru                                  &kp U                     &hmr RSHFT N  &hmr LCTRL H  &kp D  &kp X
-  &kp Q  &kp S  &kp M         &gr_comma_ru  &kp GRAVE                                   &kp COMMA                 &kp L         &kp K         &kp G  &kp SEMICOLON
-                              &trans        &arcane_left_ru LSHFT 0  &trans    &lt 3 C  &arcane_right_ru RSHFT 0  &trans
+  &kp A  &kp E  &kp F  &kp DOT       &gr_minus                                   &kp I                     &kp V   &kp Y  &kp R  &kp P
+  &kp Z  &kp B  &kp J  &kp T         &gr_dot_ru                                  &kp U                     &kp N   &kp H  &kp D  &kp X
+  &kp Q  &kp S  &kp M  &gr_comma_ru  &kp GRAVE                                   &kp COMMA                 &kp L   &kp K  &kp G  &kp SEMICOLON
+                       &trans        &arcane_left_ru LSHFT 0  &trans    &lt 3 C  &arcane_right_ru RSHFT 0  &trans
             >;
         };
 
         nav_layer {
             label = "NAVI";
             bindings = <
-  &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))                   &kp LC(HOME)        &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
-  &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))                    &kp LC(END)         &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
-  &mo 8            &cut_string   &new_line_down  &kp DEL        &kp LS(ENTER)                      &kp ENTER           &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &kp PRINTSCREEN
-                                                 &trans         &trans            &trans    &mo 4  &layer_sft 6 RSHFT  &kp LCTRL
+  &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))                   &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
+  &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))                    &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
+  &mo 6            &cut_string   &new_line_down  &kp DEL        &kp LS(ENTER)                      &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
+                                                 &trans         &trans            &trans    &mo 4  &kp LSHFT     &kp LCTRL
             >;
         };
 
