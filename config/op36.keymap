@@ -1201,7 +1201,8 @@
 
         guui {
             bindings = <&kp LEFT_GUI>;
-            key-positions = <30 35>;
+            key-positions = <33 34>;
+            layers = <0 1>;
         };
     };
 
@@ -1643,7 +1644,7 @@
   &kp J  &kp Y      &kp A      &kp U         &gr_minus                           &kp Q      &kp G      &kp N  &kp F  &kp K
   &kp H  &kp I      &kp O      &kp E         &gr_dot_en                          &kp P      &kp D      &kp R  &kp S  &kp M
   &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                           &kp B      &kp C      &kp L  &kp W  &kp V
-                               &lt 7 TAB     &kp LSHFT   &lt 2 SPACE    &lt 3 T  &kp RSHFT  &lt 7 ESC
+                               &lt 7 TAB     &kp LSHFT   &lt 2 SPACE    &lt 3 T  &kp RSHFT  &lt 4 ESC
             >;
         };
 
