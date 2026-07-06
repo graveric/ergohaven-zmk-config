@@ -1640,19 +1640,19 @@
         en_base {
             label = "BASE";
             bindings = <
-  &kp J  &kp Y      &kp A      &kp U         &gr_minus                                        &kp Q                     &kp G      &kp N  &kp F  &kp K
-  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                                       &kp P                     &kp D      &kp R  &kp S  &kp M
-  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                                        &kp B                     &kp C      &kp L  &kp W  &kp V
-                               &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 7 ESC
+  &kp J  &kp Y      &kp A      &kp U         &gr_minus                           &kp Q      &kp G      &kp N  &kp F  &kp K
+  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                          &kp P      &kp D      &kp R  &kp S  &kp M
+  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                           &kp B      &kp C      &kp L  &kp W  &kp V
+                               &lt 7 TAB     &kp LSHFT   &lt 2 SPACE    &lt 3 T  &kp RSHFT  &lt 7 ESC
             >;
         };
 
         ru {
             bindings = <
-  &kp A  &kp E  &kp F  &kp DOT       &gr_minus                                   &kp I                     &kp V   &kp Y  &kp R  &kp P
-  &kp Z  &kp B  &kp J  &kp T         &gr_dot_ru                                  &kp U                     &kp N   &kp H  &kp D  &kp X
-  &kp Q  &kp S  &kp M  &gr_comma_ru  &kp GRAVE                                   &kp COMMA                 &kp L   &kp K  &kp G  &kp SEMICOLON
-                       &trans        &arcane_left_ru LSHFT 0  &trans    &lt 3 C  &arcane_right_ru RSHFT 0  &trans
+  &kp A  &kp E  &kp F  &kp DOT       &gr_minus                      &kp I      &kp V   &kp Y  &kp R  &kp P
+  &kp Z  &kp B  &kp J  &kp T         &gr_dot_ru                     &kp U      &kp N   &kp H  &kp D  &kp X
+  &kp Q  &kp S  &kp M  &gr_comma_ru  &kp GRAVE                      &kp COMMA  &kp L   &kp K  &kp G  &kp SEMICOLON
+                       &trans        &kp LSHFT   &trans    &lt 3 C  &kp RSHFT  &trans
             >;
         };
 
