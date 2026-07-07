@@ -19,6 +19,7 @@
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
             ignored-key-positions = <35>;
         };
 
@@ -27,8 +28,9 @@
             label = "TABBER";
             #binding-cells = <0>;
             bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
+
             ignored-key-positions = <35>;
-        };        
+        };
 
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
@@ -1244,6 +1246,12 @@
             key-positions = <26 25>;
             layers = <2 11>;
         };
+
+        lgui {
+            bindings = <&kp LGUI>;
+            key-positions = <32 33>;
+            layers = <0 1>;
+        };
     };
 
     macros {
@@ -1673,7 +1681,6 @@
             bindings = <&kp RA(LS(C)) &kp SPACE &sk LSHFT>;
             label = "GM_DOT_SPACE_SHIFT";
         };
-
     };
 
     keymap {
