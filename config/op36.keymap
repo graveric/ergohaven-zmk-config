@@ -18,14 +18,14 @@
 
         mt_new_line_down: mt_new_line_down {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
 
             flavor = "balanced";
             tapping-term-ms = <170>;
             quick-tap-ms = <125>;
             require-prior-idle-ms = <150>;
 
-            bindings = <&new_line_down>, <&kp>;
+            bindings = <&kp>, <&new_line_down>;
         };
 
         mt_cut_string: mt_cut_string {
@@ -37,7 +37,7 @@
             quick-tap-ms = <125>;
             require-prior-idle-ms = <150>;
 
-            bindings = <&cut_string>, <&kp>;
+            bindings = <&kp>, <&cut_string>;
         };        
 
         hml: hrm_left {
@@ -1694,7 +1694,7 @@
             bindings = <
   &kp TAB          &kp LS(HOME)         &kp LS(UP)              &kp LS(END)       &kp LC(LS(HOME))          &kp LC(HOME) &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
   &lt 5 LS(LC(K))  &kp LS(LEFT)         &kp LS(DOWN)            &kp LS(RIGHT)     &kp LS(LC(END))           &kp LC(END)  &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
-  &mo 6            &mt_cut_string LALT  &mt_new_line_down LCTL  &kp DEL           &kp TAB                   &kp ENTER    &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
+  &mo 6            &trans               &trans                  &kp DEL           &kp TAB                   &kp ENTER    &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
                                                                 &trans            &trans        &trans      &kp LCTRL  &mo 11        &kp LSHFT
             >;
         };
