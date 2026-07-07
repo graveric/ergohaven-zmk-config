@@ -5,21 +5,15 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mt {
+    quick-tap-ms = <100>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <170>;
+};
 
 / {
     behaviors {
-        // 3. Собираем кастомный hold-tap
-        // Свойства bindings в hold-tap по спецификации ZMK могут принимать ЛЮБЫЕ поведения с #binding-cells = <0>
-        lt_clean: lt_clean {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_CLEAN";
-            #binding-cells = <2>; // Ждет два параметра в keymap (мы их пробросим в tap)
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            // Вызываем макрос на зажатие, макрос на отжатие, а встроенный движок hold-tap сам разберется с tap-клавишей
-            bindings = <&m_lt_press>, <&m_lt_release>;
-        };
-
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
@@ -1670,25 +1664,15 @@
             label = "GM_DOT_SPACE_SHIFT";
         };
 
-        // 1. Макрос для зажатия (Hold) — просто включает слой 2
-        m_lt_press: m_lt_press {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &mo 2>;
-        };
-
-        // 2. Макрос для отпускания (Release) — тушит слой и чистит моды
-        m_lt_release: m_lt_release {
+        clean_mods: clean_mods {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             bindings 
-                = <&macro_release &mo 2>
-                , <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI>;
-        };  
+                = <&macro_release &mo 2> // 1. Выключаем слой 2
+                , <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI>; // 2. Чистим моды
+        };
     };
 
     keymap {
@@ -1719,7 +1703,7 @@
   &kp TAB          &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
   &lt 5 LS(LC(K))  &kp LS(LEFT)            &kp LS(DOWN)             &kp LS(RIGHT)  &kp LS(LC(END))                        &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
   &mo 6            &cut_string_alt LALT 0  &line_down_ctrl LCTRL 0  &kp DEL        &kp TAB                                &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
-                                                                    &trans         &trans            &trans    &kp LCTRL  &mo 11        &kp LSHFT
+                                                                    &trans         &clean_mods            &trans    &kp LCTRL  &mo 11        &kp LSHFT
             >;
         };
 
