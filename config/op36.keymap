@@ -12,10 +12,8 @@
     tapping-term-ms = <170>;
 };
 
-
 / {
     behaviors {
-
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
@@ -969,6 +967,30 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        line_down_ctrl: line_down_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LINE_DOWN_CTRL";
+            bindings = <&kp>, <&new_line_down>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+        };
+
+        cut_string_alt: cut_string_alt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CUT_STRING_ALT";
+            bindings = <&kp>, <&cut_string>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -1668,10 +1690,10 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-  &kp TAB          &kp LS(HOME)         &kp LS(UP)              &kp LS(END)       &kp LC(LS(HOME))          &kp LC(HOME) &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
-  &lt 5 LS(LC(K))  &kp LS(LEFT)         &kp LS(DOWN)            &kp LS(RIGHT)     &kp LS(LC(END))           &kp LC(END)  &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
-  &mo 6            &trans               &trans                  &kp DEL           &kp TAB                   &kp ENTER    &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
-                                                                &trans            &trans        &trans      &kp LCTRL  &mo 11        &kp LSHFT
+  &kp TAB          &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
+  &lt 5 LS(LC(K))  &kp LS(LEFT)            &kp LS(DOWN)             &kp LS(RIGHT)  &kp LS(LC(END))                        &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
+  &mo 6            &cut_string_alt LALT 0  &line_down_ctrl LCTRL 0  &kp DEL        &kp TAB                                &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
+                                                                    &trans         &trans            &trans    &kp LCTRL  &mo 11        &kp LSHFT
             >;
         };
 
