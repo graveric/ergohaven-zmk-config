@@ -12,62 +12,23 @@
     tapping-term-ms = <170>;
 };
 
-
-
-
-#define PARAM_1 0
-#define PARAM_2 0
-
-#define MACRO(NAME, COMPATIBLE, BINDING_CELLS, BINDINGS) \
-    NAME: NAME { \
-        compatible = COMPATIBLE; \
-        #binding-cells = <BINDING_CELLS>; \
-        wait-ms = <0>; \
-        tap-ms = <0>; \
-        bindings = \
-            <BINDINGS>; \
-    };
-
-#define MACRO_NO_PARAM(NAME, BINDINGS)  MACRO(NAME, "zmk,behavior-macro"          , 0, BINDINGS)
-#define MACRO_ONE_PARAM(NAME, BINDINGS) MACRO(NAME, "zmk,behavior-macro-one-param", 1, BINDINGS)
-#define MACRO_TWO_PARAM(NAME, BINDINGS) MACRO(NAME, "zmk,behavior-macro-two-param", 2, BINDINGS)
-
-#define MODMORPH(NAME, NORMAL, MORPHED, MODS, KEEP_MODS) \
-    NAME: NAME { \
-        compatible = "zmk,behavior-mod-morph"; \
-        #binding-cells = <0>; \
-        bindings = <NORMAL>, <MORPHED>; \
-        mods = <(MODS)>; \
-        keep-mods = <(KEEP_MODS)>; \
-    };
-
-
 / {
     behaviors {
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <35>;
+        };
 
-        MACRO_TWO_PARAM(
-            m_hold_mod_press_key,
-            &macro_press
-                &macro_param_1to1 &kp PARAM_1
-            &macro_tap
-                &macro_param_2to1 &kp PARAM_2
-        )
-
-        MODMORPH(
-            tabber,
-            &m_hold_mod_press_key LCTRL TAB,
-            &kp TAB,
-            MOD_LCTL,
-            MOD_LCTL
-        )
-
-        MODMORPH(
-            swapper_win,
-            &m_hold_mod_press_key LALT TAB,
-            &kp TAB,
-            MOD_LALT,
-            MOD_LALT
-        )
+        tabber: tabber {
+            compatible = "zmk,behavior-tri-state";
+            label = "TABBER";
+            #binding-cells = <0>;
+            bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
+            ignored-key-positions = <35>;
+        };        
 
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
@@ -1278,12 +1239,6 @@
             layers = <1>;
         };
 
-        guui {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <33 34>;
-            layers = <0 1>;
-        };
-
         ShiftEnter {
             bindings = <&kp LC(ENTER)>;
             key-positions = <26 25>;
@@ -1719,15 +1674,6 @@
             label = "GM_DOT_SPACE_SHIFT";
         };
 
-        clean_mods: clean_mods {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings 
-                = <&macro_release &mo 2> // 1. Выключаем слой 2
-                , <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI>; // 2. Чистим моды
-        };
     };
 
     keymap {
@@ -1755,7 +1701,7 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-  &swapper_win     &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
+  &swapper         &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
   &lt 5 LS(LC(K))  &kp LS(LEFT)            &kp LS(DOWN)             &kp LS(RIGHT)  &kp LS(LC(END))                        &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
   &mo 6            &cut_string_alt LALT 0  &line_down_ctrl LCTRL 0  &kp DEL        &tabber                                &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
                                                                     &trans         &clean_mods            &trans    &kp LCTRL  &mo 11        &kp LSHFT
