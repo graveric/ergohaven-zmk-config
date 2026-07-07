@@ -16,30 +16,6 @@
 / {
     behaviors {
 
-        mt_new_line_down: mt_new_line_down {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-
-            flavor = "balanced";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
-
-            bindings = <&kp>, <&new_line_down>;
-        };
-
-        mt_cut_string: mt_cut_string {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-
-            flavor = "balanced";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
-
-            bindings = <&kp>, <&cut_string>;
-        };        
-
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
