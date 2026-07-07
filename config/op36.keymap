@@ -1704,7 +1704,7 @@
   &swapper         &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
   &lt 5 LS(LC(K))  &kp LS(LEFT)            &kp LS(DOWN)             &kp LS(RIGHT)  &kp LS(LC(END))                        &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
   &mo 6            &cut_string_alt LALT 0  &line_down_ctrl LCTRL 0  &kp DEL        &tabber                                &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
-                                                                    &trans         &clean_mods            &trans    &kp LCTRL  &mo 11        &kp LSHFT
+                                                                    &trans         &trans            &trans    &kp LCTRL  &mo 11        &kp LSHFT
             >;
         };
 
