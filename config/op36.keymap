@@ -1015,15 +1015,15 @@
         compatible = "zmk,combos";
 
         kha {
-            bindings = <&kp LBKT>;
+            bindings = <&kp RA(LBKT)>;
             key-positions = <6 7>;
-            layers = <0>;
+            layers = <0 3 4>;
         };
 
         hrdsgn {
-            bindings = <&kp RBKT>;
+            bindings = <&kp RA(RBKT)>;
             key-positions = <7 8>;
-            layers = <0>;
+            layers = <0 3 4>;
         };
 
         TO_RU {
@@ -1727,7 +1727,7 @@
         Sym2 {
             label = "SYM2";
             bindings = <
-  &kp F10            &kp F9        &kp F4         &kp F3         &gr_minus                        &gr_sqp            &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
+  &kp F10            &kp F9        &kp F4         &kp F3         &gr_minus                        &kp RA(X)          &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
   &hml LEFT_GUI F11  &hml LALT F8  &hml LCTRL F5  &hml LSHFT F2  &kp RA(LS(C))                    &kp N0             &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
   &kp F12            &kp F7        &kp F6         &kp F1         &gr_slash                        &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &kp NUMBER_6        &kp LS(RA(N5))
                                                   &trans         &trans         &trans    &trans  &trans             &trans
