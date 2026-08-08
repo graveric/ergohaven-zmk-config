@@ -1729,7 +1729,7 @@
             bindings = <
   &kp F9            &kp F8            &kp F4         &kp F3           &gr_minus                                &kp RA(X)          &kp F5               &kp F6               &kp F7                &kp F10
   &hml LEFT_GUI N8  &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0    &kp RA(LS(C))                            &kp EQUAL          &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3    &hmr LEFT_GUI NUMBER_4
-  &kp F12           &kp RA(NUMBER_3)  &kp N9         &kp F1           &gr_slash                                &kp RA(SEMICOLON)  &kp F2               &kp N5               &kp RS(RA(NUMBER_5))  &kp F11
+  &kp F11           &kp RA(NUMBER_3)  &kp N9         &kp F12          &gr_slash                                &kp RA(SEMICOLON)  &kp F2               &kp N5               &kp RS(RA(NUMBER_5))  &kp F1
                                                      &mt LSHFT ASTRK  &kp SPACE      &mt LCTRL PLUS    &trans  &trans             &trans
             >;
         };
