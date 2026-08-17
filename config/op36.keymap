@@ -1252,6 +1252,12 @@
             key-positions = <32 33>;
             layers = <0 1>;
         };
+
+        paste_text {
+            bindings = <&kp LS(LC(LA(V)))>;
+            key-positions = <2 12>;
+            layers = <7>;
+        };
     };
 
     macros {
