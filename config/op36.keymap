@@ -1122,6 +1122,7 @@
         c_v {
             bindings = <&kp LC(V)>;
             key-positions = <12 2>;
+            layers = <0 1>;
         };
 
         kh {
