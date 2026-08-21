@@ -908,7 +908,7 @@
         gr_dot_en: gr_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_DOT_EN";
-            bindings = <&kp PERIOD>, <&gm_dot_space_shift>;
+            bindings = <&kp RA(LS(C))>, <&gm_dot_space_shift>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1692,7 +1692,7 @@
         arr_left: arr_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp RA(L)>;
+            bindings = <&kp RA(L) &kp MINUS>;
             label = "ARR_LEFT";
         };
 
