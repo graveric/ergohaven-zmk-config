@@ -1746,7 +1746,7 @@
         Sym1 {
             bindings = <
   &kp BACKSLASH     &arr_left   &kp LPAR   &kp RPAR       &gr_minus                          &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(MINUS)   &kp RA(LS(MINUS))  &kp RA(BACKSLASH)
-  &tag_close        &kp RA(L)   &kp EQUAL  &kp RA(LS(L))  &gr_comma_en                       &kp LS(NUMBER_2)  &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)         &kp LS(N5)
+  &tag_close        &kp RA(L)   &kp EQUAL  &kp RA(LS(L))  &gr_dot_en                         &kp LS(NUMBER_2)  &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)         &kp LS(N5)
   &kp RA(NUMBER_6)  &arr_right  &kp PLUS   &kp STAR       &gr_slash                          &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(COMMA)   &kp RA(DOT)        &kp LS(RA(GRAVE))
                                            &kp LSHFT      &lt 11 SPACE  &kp LCTRL    &trans  &trans            &trans
             >;
