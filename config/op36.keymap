@@ -20,7 +20,7 @@
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 
-            ignored-key-positions = <17>,<7>;
+            ignored-key-positions = <17>,<7>,<35>;
         };
 
         tabber: tabber {
@@ -29,7 +29,7 @@
             #binding-cells = <0>;
             bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
 
-            ignored-key-positions = <17>,<7>;
+            ignored-key-positions = <17>,<7>,<35>;
         };
 
         hml: hrm_left {
