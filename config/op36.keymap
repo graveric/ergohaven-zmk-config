@@ -1844,7 +1844,7 @@
 
         unicode {
             bindings = <
-  &kp RA(Q)        &kp RA(E)  &kp RA(A)  &kp RA(P)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)      &kp RA(V)
+  &kp RA(Q)        &kp RA(E)  &kp RA(F)  &kp RA(P)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)      &kp RA(V)
   &kp RA(H)        &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))                    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(W)      &kp RA(K)
   &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))                    &kp RA(G)  &kp BSPC   &kp RA(NUMBER_8)  &kp RA(SLASH)  &kp RA(EQUAL)
                                          &trans     &trans                &trans    &trans  &trans     &trans
