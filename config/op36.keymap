@@ -20,7 +20,7 @@
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 
-            ignored-key-positions = <17>,<7>,<35>;
+            ignored-key-positions = <17>, <7>, <35>;
         };
 
         tabber: tabber {
@@ -29,7 +29,7 @@
             #binding-cells = <0>;
             bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
 
-            ignored-key-positions = <17>,<7>,<35>;
+            ignored-key-positions = <17>, <7>, <35>;
         };
 
         hml: hrm_left {
@@ -1743,7 +1743,7 @@
   &kp J  &kp Y      &kp A      &kp U         &gr_minus                            &kp Q    &kp G      &kp N  &kp F  &kp K
   &kp H  &kp I      &kp O      &kp E         &gr_dot_en                           &kp P    &kp D      &kp R  &kp S  &kp M
   &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                            &kp B    &kp C      &kp L  &kp W  &kp V
-                               &kp LSHFT     &lt 2 SPACE  &lt 7 TAB    &lt 3 ESC  &lt 4 T  &kp RSHFT
+                               &sk LSHFT     &lt 2 SPACE  &lt 7 TAB    &lt 3 ESC  &lt 4 T  &sk RSHFT
             >;
         };
 
@@ -1762,7 +1762,7 @@
   &swapper         &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
   &lt 5 LS(LC(K))  &kp LS(LEFT)            &kp LS(DOWN)             &kp LS(RIGHT)  &kp LS(LC(END))                        &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
   &mo 6            &cut_string_alt LALT 0  &line_down_ctrl LCTRL 0  &kp DEL        &tabber                                &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
-                                                                    &trans         &trans            &trans    &kp LCTRL  &mo 11        &kp LSHFT
+                                                                    &trans         &trans            &trans    &sk LCTRL  &mo 11        &sk LSHFT
             >;
         };
 
@@ -1781,7 +1781,7 @@
   &kp BACKSLASH     &arr_left   &kp LPAR   &kp RPAR       &gr_minus                          &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(MINUS)   &kp RA(LS(MINUS))  &kp RA(BACKSLASH)
   &tag_close        &kp RA(L)   &kp EQUAL  &kp RA(LS(L))  &gr_dot_en                         &kp LS(NUMBER_2)  &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)         &kp LS(N5)
   &kp RA(NUMBER_6)  &arr_right  &kp PLUS   &kp STAR       &gr_slash                          &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(COMMA)   &kp RA(DOT)        &kp LS(RA(GRAVE))
-                                           &kp LSHFT      &lt 11 SPACE  &kp LCTRL    &trans  &trans            &trans
+                                           &sk LSHFT      &lt 11 SPACE  &sk LCTRL    &trans  &trans            &trans
             >;
         };
 
@@ -1845,10 +1845,10 @@
 
         unicode {
             bindings = <
-  &kp RA(Q)        &kp RA(E)  &kp RA(F)  &kp RA(P)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)      &kp RA(V)
-  &kp RA(H)        &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))                    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(W)      &kp RA(K)
+  &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)      &kp RA(V)
+  &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))                    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(W)      &kp RA(K)
   &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))                    &kp RA(G)  &kp BSPC   &kp RA(NUMBER_8)  &kp RA(SLASH)  &kp RA(EQUAL)
-                                         &trans     &trans                &trans    &trans  &trans     &trans
+                                     &trans     &trans                &trans    &trans  &trans     &trans
             >;
         };
     };
