@@ -1023,9 +1023,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SL2_LOCKY";
             #binding-cells = <0>;
-            bindings = <&sl 2>, <&kp A>;
+            bindings = <&sl 2>, <&tog 2>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
         };
     };
 
