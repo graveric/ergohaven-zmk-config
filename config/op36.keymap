@@ -1018,6 +1018,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        sl2_locky: sl2_locky {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SL2_LOCKY";
+            #binding-cells = <0>;
+            bindings = <&sl 2>, <&tog 2>;
+
+            tapping-term-ms = <170>;
+        };
     };
 
     combos {
@@ -1759,10 +1768,10 @@
         en_base {
             label = "BASE";
             bindings = <
-  &kp J  &kp Y      &kp A      &kp U         &gr_minus                        &kp Q  &kp G  &kp N  &kp F  &kp K
-  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                       &kp P  &kp D  &kp R  &kp S  &kp M
-  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                        &kp B  &kp C  &kp L  &kp W  &kp V
-                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &sl 2  &kp T  &sl 3
+  &kp J  &kp Y      &kp A      &kp U         &gr_minus                             &kp Q  &kp G  &kp N  &kp F  &kp K
+  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                            &kp P  &kp D  &kp R  &kp S  &kp M
+  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                             &kp B  &kp C  &kp L  &kp W  &kp V
+                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &sl2_locky  &kp T  &sl 3
             >;
         };
 
