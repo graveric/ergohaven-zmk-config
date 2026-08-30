@@ -1768,10 +1768,10 @@
         en_base {
             label = "BASE";
             bindings = <
-  &kp J  &kp Y      &kp A      &kp U         &gr_minus                         &kp Q  &kp G  &kp N  &kp F  &kp K
-  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                        &kp P  &kp D  &kp R  &kp S  &kp M
-  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                         &kp B  &kp C  &kp L  &kp W  &kp V
-                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &tog 2  &kp T  &sl 3
+  &kp J  &kp Y      &kp A      &kp U         &gr_minus                             &kp Q  &kp G  &kp N  &kp F  &kp K
+  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                            &kp P  &kp D  &kp R  &kp S  &kp M
+  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                             &kp B  &kp C  &kp L  &kp W  &kp V
+                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &sl2_locky  &kp T  &sl 3
             >;
         };
 
@@ -1790,7 +1790,7 @@
   &kp RA(LS(GRAVE))  &kp RA(L)         &kp EQUAL      &kp LS(RA(L))  &gr_minus                           &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
   &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0  &gr_dot_en                          &smc_comma      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
   &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL       &gr_slash                           &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp LS(NUMBER_2)    &kp PRCNT
-                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &trans  &sk LSHFT       &tog 2
+                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &trans  &sk LSHFT       &sl 3
             >;
         };
 
