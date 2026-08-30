@@ -1790,7 +1790,7 @@
   &kp RA(LS(GRAVE))  &kp RA(L)         &kp EQUAL      &kp LS(RA(L))  &gr_minus                           &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
   &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0  &gr_dot_en                          &smc_comma      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
   &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL       &gr_slash                           &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp LS(NUMBER_2)    &kp PRCNT
-                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &tog 2  &sk LSHFT       &sl 3
+                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &trans  &sk LSHFT       &tog 2
             >;
         };
 
