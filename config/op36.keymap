@@ -908,7 +908,7 @@
         gr_dot_en: gr_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_DOT_EN";
-            bindings = <&kp RA(LS(C))>, <&kp RA(GRAVE)>;
+            bindings = <&kp RA(LS(C))>, <&kp RA(LS(SQT))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -962,7 +962,7 @@
         gr_quote: gr_quote {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_QUOTE";
-            bindings = <&kp RA(NUMBER_2)>, <&kp RA(LS(NUMBER_2))>;
+            bindings = <&kp RA(NUMBER_2)>, <&kp RA(GRAVE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -971,7 +971,7 @@
         gr_under: gr_under {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_UNDER";
-            bindings = <&kp UNDERSCORE>, <&arr_right>;
+            bindings = <&kp UNDERSCORE>, <&kp BSLH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1010,10 +1010,10 @@
             flavor = "balanced";
         };
 
-        eq_comma: eq_comma {
+        smc_comma: smc_comma {
             compatible = "zmk,behavior-mod-morph";
-            label = "EQ_COMMA";
-            bindings = <&kp EQUAL>, <&kp RA(LS(NUMBER_5))>;
+            label = "SMC_COMMA";
+            bindings = <&kp RA(LS(N8))>, <&kp RA(LS(NUMBER_5))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1026,13 +1026,13 @@
         kha {
             bindings = <&kp RA(LBKT)>;
             key-positions = <6 7>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
         };
 
         hrdsgn {
             bindings = <&kp RA(RBKT)>;
             key-positions = <7 8>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
         };
 
         TO_RU {
@@ -1065,36 +1065,38 @@
             layers = <1>;
         };
 
-        th_alt {
-            bindings = <&kp LEFT_ALT>;
+        shtab {
+            bindings = <&kp LS(TAB)>;
             key-positions = <31 30>;
+            layers = <0 1>;
         };
 
-        th_ctrl {
-            bindings = <&kp LCTRL>;
+        th_gui {
+            bindings = <&sk LEFT_GUI>;
             key-positions = <31 32>;
+            layers = <0 1>;
         };
 
         en_lbr {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <16 6>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
         };
 
         en_rbr {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <17 7>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
         };
 
         ru_rbrc {
-            bindings = <&ru_rbr>;
+            bindings = <&kp RA(LEFT_BRACKET)>;
             key-positions = <17 7>;
             layers = <1>;
         };
 
         ru_lbrc {
-            bindings = <&ru_lbr>;
+            bindings = <&kp RA(RIGHT_BRACKET)>;
             key-positions = <16 6>;
             layers = <1>;
         };
@@ -1114,25 +1116,21 @@
         c_s {
             bindings = <&kp LC(S)>;
             key-positions = <13 12>;
-            layers = <0 1>;
         };
 
         c_c {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LC(INS)>;
             key-positions = <13 3>;
-            layers = <0 1>;
         };
 
         c_x {
             bindings = <&kp LC(X)>;
             key-positions = <14 4>;
-            layers = <0 1>;
         };
 
         c_v {
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LS(INS)>;
             key-positions = <12 2>;
-            layers = <0 1>;
         };
 
         kh {
@@ -1144,23 +1142,23 @@
         c_z {
             bindings = <&kp LC(Z)>;
             key-positions = <23 22>;
-            layers = <0 1>;
         };
 
         cs_z {
             bindings = <&kp LS(LC(Z))>;
             key-positions = <22 21>;
-            layers = <0 1>;
         };
 
         rth_ctrl {
             bindings = <&kp LCTRL>;
             key-positions = <33 34>;
+            layers = <0 1 4>;
         };
 
         rth_alt {
             bindings = <&kp LALT>;
             key-positions = <35 34>;
+            layers = <0 1 4>;
         };
 
         ye {
@@ -1198,8 +1196,8 @@
 
         CtrlEnter {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <26 26 27>;
-            layers = <2 11>;
+            key-positions = <26 26 27 28>;
+            layers = <4>;
         };
 
         Ralt1 {
@@ -1212,18 +1210,6 @@
             key-positions = <25 15>;
         };
 
-        line_up_nav {
-            bindings = <&new_line_up>;
-            key-positions = <23 22>;
-            layers = <2>;
-        };
-
-        copy_string_nav {
-            bindings = <&copy_string>;
-            key-positions = <21 22>;
-            layers = <2>;
-        };
-
         not_equal {
             bindings = <&not_equal_macro>;
             key-positions = <5 15>;
@@ -1231,37 +1217,24 @@
 
         fadein_en {
             bindings = <&sl 9>;
-            key-positions = <11 12>;
+            key-positions = <25 26>;
             layers = <0>;
         };
 
         fadein_ru {
             bindings = <&sl 10>;
-            key-positions = <12 11>;
-        };
-
-        ru_slp {
-            bindings = <&kp RA(LEFT_BRACKET)>;
-            key-positions = <15 16>;
-            layers = <1>;
-        };
-
-        ru_srp {
-            bindings = <&kp RA(RIGHT_BRACKET)>;
-            key-positions = <5 6>;
-            layers = <1>;
+            key-positions = <25 26>;
         };
 
         ShiftEnter {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <26 25>;
-            layers = <2 11>;
+            key-positions = <26 27>;
+            layers = <4>;
         };
 
-        lgui {
-            bindings = <&kp LGUI>;
+        cpswrd {
+            bindings = <&caps_word>;
             key-positions = <32 33>;
-            layers = <0 1>;
         };
 
         paste_text {
@@ -1273,7 +1246,53 @@
         m23 {
             bindings = <&p23>;
             key-positions = <17 18>;
-            layers = <3>;
+            layers = <2>;
+        };
+
+        symtosym2 {
+            bindings = <&sl 3>;
+            key-positions = <31 30>;
+            layers = <2>;
+        };
+
+        ctrl-up {
+            bindings = <&kp LC(UP)>;
+            key-positions = <7 17>;
+            layers = <4>;
+        };
+
+        ctrl-down {
+            bindings = <&kp LC(DOWN)>;
+            key-positions = <17 27>;
+            layers = <4>;
+        };
+
+        ctrl-left {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <16 17>;
+            layers = <4>;
+        };
+
+        ctrl-right {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <17 18>;
+            layers = <4>;
+        };
+
+        ctrl-bksp {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <15 16>;
+            layers = <4>;
+        };
+
+        to_adj_l {
+            bindings = <&mo 5>;
+            key-positions = <10 11>;
+        };
+
+        to_adj_r {
+            bindings = <&mo 5>;
+            key-positions = <18 19>;
         };
     };
 
@@ -1740,10 +1759,10 @@
         en_base {
             label = "BASE";
             bindings = <
-  &kp J  &kp Y      &kp A      &kp U         &gr_minus                            &kp Q    &kp G      &kp N  &kp F  &kp K
-  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                           &kp P    &kp D      &kp R  &kp S  &kp M
-  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                            &kp B    &kp C      &kp L  &kp W  &kp V
-                               &sk LSHFT     &lt 2 SPACE  &lt 7 TAB    &lt 3 ESC  &lt 4 T  &sk RSHFT
+  &kp J  &kp Y      &kp A      &kp U         &gr_minus                        &kp Q  &kp G  &kp N  &kp F  &kp K
+  &kp H  &kp I      &kp O      &kp E         &gr_dot_en                       &kp P  &kp D  &kp R  &kp S  &kp M
+  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                        &kp B  &kp C  &kp L  &kp W  &kp V
+                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &sl 2  &kp T  &sl 3
             >;
         };
 
@@ -1752,36 +1771,36 @@
   &kp A  &kp E  &kp F  &kp DOT       &gr_minus                     &kp I      &kp V   &kp Y  &kp R  &kp P
   &kp Z  &kp B  &kp J  &kp T         &gr_dot_ru                    &kp U      &kp N   &kp H  &kp D  &kp X
   &kp Q  &kp S  &kp M  &gr_comma_ru  &kp GRAVE                     &kp COMMA  &kp L   &kp K  &kp G  &kp SEMICOLON
-                       &trans        &trans      &trans    &trans  &lt 4 C    &trans
+                       &trans        &trans      &trans    &trans  &kp C      &trans
+            >;
+        };
+
+        Sym {
+            label = "Sym";
+            bindings = <
+  &kp RA(LS(GRAVE))  &kp RA(L)         &kp EQUAL      &kp LS(RA(F3))  &gr_minus                                &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
+  &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0   &gr_dot_en                               &smc_comma      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
+  &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL        &kp RA(NUMBER_4)                         &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp LS(NUMBER_2)    &kp PRCNT
+                                                      &kp RA(COMMA)   &lt 4 SPACE       &kp RA(DOT)    &tog 2  &sk LSHFT       &trans
+            >;
+        };
+
+        Sym2 {
+            bindings = <
+  &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)       &kp RA(I)                                  &kp RA(X)         &kp RA(A)             &kp RA(Y)         &kp RA(R)  &kp RA(V)
+  &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp RA(LS(N6))  &kp RA(SLASH)                              &kp RA(U)         &kp RA(NUMBER_5)      &kp RA(C)         &kp RA(W)  &kp RA(K)
+  &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)       &kp RA(LS(NUMBER_4))                       &kp LS(RA(SEMI))  &kp RA(LS(NUMBER_3))  &kp RA(NUMBER_3)  &kp RA(D)  &kp RA(EQUAL)
+                                     &trans          &trans                &sk LSHFT    &trans  &sk LSHFT         &tog 3
             >;
         };
 
         nav_layer {
             label = "NAVI";
             bindings = <
-  &swapper         &kp LS(HOME)            &kp LS(UP)               &kp LS(END)    &kp LC(LS(HOME))                       &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
-  &lt 5 LS(LC(K))  &kp LS(LEFT)            &kp LS(DOWN)             &kp LS(RIGHT)  &kp LS(LC(END))                        &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
-  &mo 6            &cut_string_alt LALT 0  &line_down_ctrl LCTRL 0  &kp DEL        &tabber                                &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN
-                                                                    &trans         &trans            &trans    &sk LCTRL  &mo 11        &sk LSHFT
-            >;
-        };
-
-        Num {
-            label = "NUM";
-            bindings = <
-  &kp F9            &kp F8            &kp F4         &kp F3            &gr_minus                                &kp RA(X)          &kp F5               &kp F6               &kp F7                &kp F10
-  &hml LEFT_GUI N8  &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0     &kp RA(LS(C))                            &eq_comma          &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3    &hmr LEFT_GUI NUMBER_4
-  &kp F11           &kp RA(NUMBER_3)  &kp N9         &kp F12           &gr_slash                                &kp RA(SEMICOLON)  &kp F2               &kp N5               &kp RS(RA(NUMBER_3))  &kp F1
-                                                     &kp RA(NUMBER_5)  &lt 4 SPACE    &kp RA(LS(N6))    &trans  &trans             &trans
-            >;
-        };
-
-        Sym1 {
-            bindings = <
-  &kp BACKSLASH     &arr_left   &kp LPAR   &kp RPAR       &gr_minus                          &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(MINUS)   &kp RA(LS(MINUS))  &kp RA(BACKSLASH)
-  &tag_close        &kp RA(L)   &kp EQUAL  &kp RA(LS(L))  &gr_dot_en                         &kp LS(NUMBER_2)  &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)         &kp LS(N5)
-  &kp RA(NUMBER_6)  &arr_right  &kp PLUS   &kp STAR       &gr_slash                          &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(COMMA)   &kp RA(DOT)        &kp LS(RA(GRAVE))
-                                           &sk LSHFT      &lt 11 SPACE  &sk LCTRL    &trans  &trans            &trans
+  &swapper      &kp LS(HOME)  &kp LS(UP)     &kp LS(END)    &tabber                     &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
+  &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS                     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
+  &lt 6 F10     &kp F11       &kp F12        &kp F2         &swapper                    &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
+                                             &trans         &trans    &trans    &tog 4  &sk LSHFT      &sk LEFT_GUI
             >;
         };
 
@@ -1809,10 +1828,10 @@
 
         Shortcuts {
             bindings = <
-  &kp LS(DEL)    &kp LC(W)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)                      &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
-  &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                      &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
-  &kp LA(F8)     &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)                      &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LC(Q)
-                                           &trans         &trans     &trans    &kp LALT  &kp LCTRL      &kp LSHFT
+  &kp LS(DEL)    &kp LC(W)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)                          &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
+  &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                          &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
+  &kp LA(F8)     &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)                          &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LC(Q)
+                                           &trans         &trans     &trans    &kp LC(LALT)  &kp LC(LS(V))  &kp LC(V)
             >;
         };
 
