@@ -14,6 +14,12 @@
 
 / {
     behaviors {
+        rus_caps_word: rus_caps_word {
+            compatible = "zmk,behavior-russian-capsword";
+            #binding-cells = <0>;
+            continue-list = <MINUS BACKSPACE DELETE>;
+        };        
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
@@ -1253,7 +1259,14 @@
         cpswrd {
             bindings = <&caps_word>;
             key-positions = <32 33>;
+            layers = <0>;
         };
+
+        cpswrd_ru {
+            bindings = <&rus_caps_word>;
+            key-positions = <32 33>;
+            layers = <1>;
+        };        
 
         paste_text {
             bindings = <&kp LS(LC(LA(V)))>;
@@ -1780,7 +1793,7 @@
   &kp J  &kp Y      &kp A      &kp U         &gr_minus                             &kp Q  &kp G       &kp N  &kp F  &kp K
   &kp H  &kp I      &kp O      &kp E         &gr_dot_en                            &kp P  &kp D       &kp R  &kp S  &kp M
   &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                             &kp B  &kp C       &kp L  &kp W  &kp V
-                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &sl2_locky  &kp T  &sl3_locky
+                               &kc LSHFT     &lt 4 SPACE  &lt 7 TAB    &mo 2  &kp T  &kp RSHFT
             >;
         };
 
@@ -1796,10 +1809,10 @@
         Sym {
             label = "Sym";
             bindings = <
-  &kp RA(LS(GRAVE))  &kp RA(L)         &kp EQUAL      &kp LS(RA(L))  &gr_minus                           &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
-  &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0  &gr_dot_en                          &smc_comma      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
-  &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL       &gr_slash                           &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp LS(NUMBER_2)    &kp PRCNT
-                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &tog 2  &sk LSHFT       &sl3_locky
+  &kp LS(N5)  &kp RA(L)         &kp EQUAL      &kp LS(RA(L))  &gr_minus                           &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
+  &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0  &gr_dot_en                          &kp RA(LS(N8))      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
+  &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL       &gr_slash                           &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp RA(NUMBER_4)    &kp LS(NUMBER_2)
+                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &tog 2        &sl3_locky &sk LSHFT
             >;
         };
 
@@ -1808,17 +1821,17 @@
   &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)       &kp RA(I)                                  &kp RA(X)         &kp RA(A)             &kp RA(Y)         &kp RA(R)  &kp RA(V)
   &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp RA(LS(N6))  &kp RA(SLASH)                              &kp RA(U)         &kp RA(NUMBER_5)      &kp RA(C)         &kp RA(W)  &kp RA(K)
   &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)       &kp RA(LS(NUMBER_4))                       &kp LS(RA(SEMI))  &kp RA(LS(NUMBER_3))  &kp RA(NUMBER_3)  &kp RA(D)  &kp RA(EQUAL)
-                                     &trans          &trans                &sk LSHFT    &trans  &sk LSHFT         &tog 3
+                                     &sk LSHFT &trans          &trans                    &tog 3 &trans  &sk RSHFT      
             >;
         };
 
         nav_layer {
             label = "NAVI";
             bindings = <
-  &swapper      &kp LS(HOME)  &kp LS(UP)     &kp LS(END)    &tabber                     &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
+  &kp F1      &kp F8  &kp F4     &kp F3    &swapper                     &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
   &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS                     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
-  &lt 6 F10     &kp F11       &kp F12        &kp F2         &swapper                    &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
-                                             &trans         &trans    &trans    &tog 4  &sk LSHFT      &sk LEFT_GUI
+  &lt 6 F10     &kp F11       &kp F12        &kp F2         &tabber                    &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
+                                             &trans         &trans    &trans    &tog 4  &sk LEFT_GUI    &sk LSHFT      
             >;
         };
 

@@ -17,5 +17,8 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
+    - name: zmk-behavior-russian-capsword
+      url: https://github.com/graveric/zmk-behavior-russian-capsword
+      revision: main      
   self:
     path: config
