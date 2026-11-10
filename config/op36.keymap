@@ -914,7 +914,7 @@
         gr_dot_en: gr_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_DOT_EN";
-            bindings = <&kp RA(LS(C))>, <&kp RA(LS(SQT))>;
+            bindings = <&kp RA(LS(C))>, <&kp RA(LS(NUMBER_2))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1858,10 +1858,10 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-  &kp F1        &kp F8        &kp F4         &kp F3         &swapper                    &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
-  &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS                     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
-  &lt 6 F10     &kp F11       &kp F12        &kp F2         &tabber                     &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
-                                             &trans         &trans    &trans    &tog 4  &sk LEFT_GUI   &sk LSHFT
+  &kp F1        &kp F8        &kp F4         &kp F3         &tabber                        &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
+  &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS                        &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
+  &lt 6 F10     &kp F11       &kp F12        &kp F2         &swapper                       &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
+                                             &trans         &trans    &trans    &kp LCTRL  &sk LEFT_GUI   &sk LSHFT
             >;
         };
 
