@@ -1868,10 +1868,10 @@
         adj {
             label = "adj";
             bindings = <
-  &bootloader   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1      &bt BT_SEL 0                         &kp C_MUTE       &kp F3  &kp F4  &kp F9  &kp F10
-  &kp LEFT_GUI  &kp LALT      &kp LCTRL     &kp LSHFT         &kp C_VOLUME_DOWN                    &kp C_VOLUME_UP  &kp F2  &kp F5  &kp F8  &kp F11
-  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &kp C_PLAY_PAUSE  &kp C_PREV                           &kp C_NEXT       &kp F1  &kp F6  &kp F7  &kp F12
-                                            &trans            &trans             &trans    &trans  &trans           &trans
+  &bootloader   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0                         &kp C_MUTE       &kp F3  &kp F4  &kp F9  &kp F10
+  &kp LEFT_GUI  &kp LALT      &kp LCTRL     &kp LSHFT       &kp C_VOLUME_DOWN                    &kp C_VOLUME_UP  &kp F2  &kp F5  &kp F8  &kp F11
+  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &bt BT_CLR_ALL  &kp C_PREV                           &kp C_NEXT       &kp F1  &kp F6  &kp F7  &kp F12
+                                            &trans          &trans             &trans    &trans  &trans           &trans
             >;
 
             display-name = "Adjust";
@@ -1889,10 +1889,10 @@
 
         Shortcuts {
             bindings = <
-  &kp LS(DEL)    &kp LC(W)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)                          &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
-  &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                          &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
-  &kp LA(F8)     &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)                          &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LC(Q)
-                                           &trans         &trans     &trans    &kp LC(LALT)  &kp LC(LS(V))  &kp LC(V)
+  &kp LS(DEL)    &kp LC(W)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)                          &kp LC(MINUS)  &kp LC(D)      &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
+  &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                          &kp LC(EQUAL)  &kp LC(P)      &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
+  &kp LA(F8)     &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)                          &kp LC(B)      &kp LC(I)      &kp LC(U)          &kp LS(LC(X))  &kp LC(Q)
+                                           &trans         &trans     &trans    &kp LC(LALT)  &kp LC(LS(V))  &lt (5) LC(V)
             >;
         };
 
