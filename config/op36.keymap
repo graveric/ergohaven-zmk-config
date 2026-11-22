@@ -1926,7 +1926,7 @@
             bindings = <
   &kp F1        &kp F8        &kp F4         &kp F3         &tabber                        &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
   &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS                        &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
-  &lt 6 F10     &kp F11       &lt 8 F12      &kp F2         &swapper                       &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
+  &lt 6 F10     &lt 5 F11     &lt 8 F12      &kp F2         &swapper                       &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN
                                              &trans         &trans    &trans    &kp LCTRL  &sk LEFT_GUI   &sk LSHFT
             >;
         };
